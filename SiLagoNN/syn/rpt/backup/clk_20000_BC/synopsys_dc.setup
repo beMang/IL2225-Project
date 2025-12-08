@@ -1,11 +1,5 @@
 set SynopsysHome /opt/tools/synopsys/syn/V-2023.12-SP4
-
-# Absolute BC
-# set lib_name "GF22FDX_SC8T_104CPP_BASE_CSC28L_FFG_0P88V_0P00V_0P80V_M0P80V_M40C_ccs.db"
-
-# Default
-set lib_name "GF22FDX_SC8T_104CPP_BASE_CSC28L_FFG_0P72V_0P00V_0P00V_0P00V_M40C_ccs.db"
-
+set lib_name "GF22FDX_SC8T_104CPP_BASE_CSC28L_FFG_0P88V_0P00V_0P80V_M0P80V_M40C_ccs.db"
 set search_path "/opt/tools/synopsys/syn/V-2023.12-SP4/libraries/syn\
                 /opt/pdk/gfip/22FDX-EXT/GF22FDX_SC8T_104CPP_BASE_CSC28L_FDK_RELV06R60/model/timing/ccs_db"
 
