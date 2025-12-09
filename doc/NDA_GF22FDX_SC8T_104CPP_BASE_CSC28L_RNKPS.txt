@@ -1,0 +1,71 @@
+#==========================================================================
+				Release Description
+#==========================================================================
+This document describes the features and enhancements done for the Standard Cell Library GF22FDX_SC8T_104CPP_BASE_CSC28L.
+This document is intended to assist the design engineers in the use of Standard Cells Library products for System-on-Chip (SoC) or in general any chip development.
+
+Technology	: GF22FDX
+Version		: V06R60
+Release Date	: May 30, 2022
+Release Type	: FDK
+
+#==========================================================================
+---------------------------------------------------------------------------
+Version:	V06R60
+---------------------------------------------------------------------------
+LIBERTY 
+	- Default timing arc support enabled for sequential cells. 
+
+VERILOG
+	- Default arc support enabled for sequential cells. 
+	- Updated the sdf syntax for latch and flop.
+
+LEF
+ 	- Updated BASE product LEF files with vertical abutment spacing constraints defined for only TAP* & ANTENNAX* cells.
+
+NDM
+	- Updated the existing BASE product ndm files for only TAP* & ANTENNAX* cells with vertical abutment spacing rule constraints.
+	- Also provided the vertical abutment forbidden spacing rules file in scripts/icc2/vertical_abutment_forbidden_pairs.tcl 
+
+DOCUMENTATION
+	- For release history of earlier library, please refer $LIBRARY_ROOT/doc/NDA_GF22FDX_SC8T_104CPP_BASE_CSC28L_RNKPS.pdf document.
+
+COMMON
+	- This product is a FDK release.
+
+---------------------------------------------------------------------------
+Version:	V06R50
+---------------------------------------------------------------------------
+MILKYWAY/NDM
+        - view updated for Antenna information corresponding to the change in lef view.
+
+CLF
+        - view updated for Antenna information corresponding to the change in lef view.
+
+LEF
+        - ANTENNAGATEAREA attribute has been recalculated based on correct formula.
+	- ANTENNAMAXAREACAR attribute has been removed, as the calculation related to Antenna information is not cumulative in 22FDX technology.
+
+COMMON
+	- This product is a FDK release.
+   	- Please refer GF22FDX_SC8T_104CPP_BASE_CSC28L_FDK_RELV06R40 version for more information about the product
+
+#==========================================================================
+				PDK Data 
+#==========================================================================
+PDK
+	- pdk-22FDX_V1.3_2.2.
+
+
+#==========================================================================
+				PVT Corners
+#==========================================================================
+For supported PVTs, kindly refer $LIBRARY_ROOT/doc/CORNERS.txt file.
+
+
+#==========================================================================
+				Cell List
+#==========================================================================
+For supported cells' list, kindly refer $LIBRARY_ROOT/doc/GF22FDX_SC8T_104CPP_BASE_CSC28L.cell_list file.
+
+
