@@ -1,0 +1,650 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : drra_wrapper
+Version: V-2023.12-SP4
+Date   : Tue Dec  9 20:39:24 2025
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: FFG_0P72V_0P00V_0P00V_0P00V_M40C   Library: GF22FDX_SC8T_104CPP_BASE_CSC28L_FFG_0P72V_0P00V_0P00V_0P00V_M40C
+Wire Load Model Mode: top
+
+  Startpoint: Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/clk_r_REG122_S2
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/clk_r_REG16_S3
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/clk_r_REG122_S2/CLK (SC8T_DFFRQX1_CSC28L)
+                                                          0.00 #     0.00 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/clk_r_REG122_S2/Q (SC8T_DFFRQX1_CSC28L)
+                                                         86.01      86.01 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U111/Z (SC8T_XOR2X0P5_CSC28L)
+                                                         59.24     145.25 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U270/Z (SC8T_ND2X1_MR_CSC28L)
+                                                         17.96     163.21 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U266/Z (SC8T_ND2IAX1_MR_CSC28L)
+                                                         28.51     191.71 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U53/Z (SC8T_ND2IAX1_MR_CSC28L)
+                                                         28.86     220.58 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U267/Z (SC8T_ND2IAX1_MR_CSC28L)
+                                                         29.24     249.82 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U158/Z (SC8T_ND2IAX2_CSC28L)
+                                                         27.75     277.57 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U269/Z (SC8T_ND2IAX1_MR_CSC28L)
+                                                         26.50     304.07 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U160/Z (SC8T_ND2IAX1_CSC28L)
+                                                         25.25     329.32 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U58/Z (SC8T_INVX1_CSC28L)
+                                                         13.42     342.74 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U265/Z (SC8T_ND2X1_MR_CSC28L)
+                                                         19.82     362.56 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U268/Z (SC8T_ND2IAX1_MR_CSC28L)
+                                                         33.69     396.25 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U159/Z (SC8T_CKOR2X4_CSC28L)
+                                                         29.93     426.19 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U134/Z (SC8T_ND2IAX4_CSC28L)
+                                                         19.61     445.80 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U234/Z (SC8T_ND2IAX1_MR_CSC28L)
+                                                         26.76     472.56 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U154/Z (SC8T_ND2IAX2_CSC28L)
+                                                         28.87     501.43 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U235/Z (SC8T_ND2IAX1_MR_CSC28L)
+                                                         28.03     529.46 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U132/Z (SC8T_ND2IAX1_MR_CSC28L)
+                                                         33.71     563.18 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U32/Z (SC8T_ND2IAX2_CSC28L)
+                                                         31.53     594.70 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U225/Z (SC8T_ND2IAX1_MR_CSC28L)
+                                                         28.60     623.30 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U34/Z (SC8T_ND2IAX2_CSC28L)
+                                                         33.05     656.35 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U133/Z (SC8T_ND2IAX1_MR_CSC28L)
+                                                         34.81     691.16 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U33/Z (SC8T_ND2IAX2_CSC28L)
+                                                         34.39     725.55 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U226/Z (SC8T_ND2IAX1_MR_CSC28L)
+                                                         43.47     769.02 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U117/Z (SC8T_CKOR2X4_CSC28L)
+                                                         38.85     807.87 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U233/Z (SC8T_ND2IAX1_MR_CSC28L)
+                                                         24.14     832.01 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U39/Z (SC8T_ND2IAX1_MR_CSC28L)
+                                                         32.88     864.89 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U156/Z (SC8T_ND2IAX1_CSC28L)
+                                                         29.43     894.32 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U155/Z (SC8T_CKINVX1_CSC28L)
+                                                         18.36     912.67 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U141/Z (SC8T_CKAN2X1_MR_CSC28L)
+                                                         26.89     939.57 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U56/Z (SC8T_AN2X1_CSC28L)
+                                                         34.26     973.83 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U126/Z (SC8T_CKAN2X1_MR_CSC28L)
+                                                         28.07    1001.90 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U140/Z (SC8T_ND2X0P5_CSC28L)
+                                                         21.32    1023.22 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U57/Z (SC8T_ND2IAX1_MR_CSC28L)
+                                                         36.22    1059.44 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U136/Z (SC8T_AN3IAX2_CSC28L)
+                                                         28.91    1088.36 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_mx_PartRem_1_31_0/Z (SC8T_MUX2X1_A_CSC28L)
+                                                         47.36    1135.72 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U114/Z (SC8T_ND2X0P5_CSC28L)
+                                                         24.09    1159.80 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U193/Z (SC8T_INVX1_CSC28L)
+                                                         22.22    1182.03 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U236/Z (SC8T_AO21X2_CSC28L)
+                                                         21.76    1203.79 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U116/Z (SC8T_ND2X0P5_CSC28L)
+                                                         18.51    1222.30 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U200/Z (SC8T_INVX1_CSC28L)
+                                                         25.88    1248.18 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_mx_PartRem_1_30_0/Z (SC8T_MUXT2X1_MR_CSC28L)
+                                                         39.40    1287.58 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U229/Z (SC8T_INVX1_CSC28L)
+                                                         11.95    1299.53 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U228/Z (SC8T_ND2X1_MR_CSC28L)
+                                                         15.72    1315.25 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U55/Z (SC8T_AOI21X1_CSC28L)
+                                                         34.99    1350.24 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U202/Z (SC8T_AOI21X1_CSC28L)
+                                                         26.36    1376.60 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U118/Z (SC8T_ND2X0P5_CSC28L)
+                                                         17.99    1394.58 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U191/Z (SC8T_INVX1_CSC28L)
+                                                         22.77    1417.36 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_mx_PartRem_1_29_1/Z (SC8T_MUX2X1_A_CSC28L)
+                                                         54.57    1471.93 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U121/Z (SC8T_ND2X0P5_CSC28L)
+                                                         23.21    1495.14 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U192/Z (SC8T_INVX1_CSC28L)
+                                                         24.93    1520.07 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U137/Z (SC8T_AOI21X1_MR_CSC28L)
+                                                         21.35    1541.43 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U123/Z (SC8T_AOI22X1_CSC28L)
+                                                         26.31    1567.74 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U113/Z (SC8T_ND2X0P5_CSC28L)
+                                                         21.20    1588.93 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U190/Z (SC8T_INVX1_CSC28L)
+                                                         32.98    1621.92 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_mx_PartRem_1_28_0/Z (SC8T_CKMUX2X1_MR_CSC28L)
+                                                         53.35    1675.27 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U227/Z (SC8T_INVX1_CSC28L)
+                                                         12.26    1687.53 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U27/Z (SC8T_ND2X1_CSC28L)
+                                                         15.46    1702.99 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U36/Z (SC8T_AOI21X1_CSC28L)
+                                                         35.04    1738.03 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U201/Z (SC8T_INVX1_CSC28L)
+                                                         21.10    1759.12 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U331/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         33.92    1793.04 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U105/Z (SC8T_AO21X2_MR_CSC28L)
+                                                         32.08    1825.12 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U112/Z (SC8T_ND2X0P5_CSC28L)
+                                                         17.44    1842.56 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U8/Z (SC8T_INVX3_CSC28L)
+                                                         21.10    1863.67 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_mx_PartRem_1_27_1/Z (SC8T_MUX2X0P5_CSC28L)
+                                                         51.71    1915.38 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_26/A[1] (divider_pipe_14_DW01_add_29)
+                                                          0.00    1915.38 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_26/U44/Z (SC8T_AN2X1_CSC28L)
+                                                         39.18    1954.56 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_26/U53/Z (SC8T_AO21X2_CSC28L)
+                                                         36.43    1990.99 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_26/U82/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         36.12    2027.11 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_26/U65/Z (SC8T_INVX1_MR_CSC28L)
+                                                         11.64    2038.75 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_26/U52/Z (SC8T_OAI31X1_CSC28L)
+                                                         24.76    2063.51 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_26/CO (divider_pipe_14_DW01_add_29)
+                                                          0.00    2063.51 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U125/Z (SC8T_INVX1_MR_CSC28L)
+                                                         13.46    2076.97 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U12/Z (SC8T_NR2X1_MR_CSC28L)
+                                                         20.24    2097.21 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U13/Z (SC8T_CKBUFX4_CSC28L)
+                                                         30.48    2127.68 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_mx_PartRem_1_26_0/Z (SC8T_CKMUX2X1_CSC28L)
+                                                         35.32    2163.01 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_25/A[0] (divider_pipe_14_DW01_add_30)
+                                                          0.00    2163.01 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_25/U77/Z (SC8T_OR2X1_CSC28L)
+                                                         25.90    2188.91 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_25/U90/Z (SC8T_AOI21X1_CSC28L)
+                                                         32.01    2220.93 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_25/U67/Z (SC8T_INVX1_CSC28L)
+                                                         23.83    2244.75 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_25/U100/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         37.05    2281.80 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_25/U68/Z (SC8T_INVX1_MR_CSC28L)
+                                                         12.78    2294.58 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_25/U58/Z (SC8T_OAI32X1_CSC28L)
+                                                         29.98    2324.56 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_25/CO (divider_pipe_14_DW01_add_30)
+                                                          0.00    2324.56 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U127/Z (SC8T_INVX1_MR_CSC28L)
+                                                         15.41    2339.97 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U103/Z (SC8T_NR2X0P5_CSC28L)
+                                                         30.18    2370.15 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U46/Z (SC8T_BUFX1_A_CSC28L)
+                                                         46.92    2417.07 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_mx_PartRem_1_25_0/Z (SC8T_MUX2X1_A_CSC28L)
+                                                         58.45    2475.51 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_24/A[0] (divider_pipe_14_DW01_add_31)
+                                                          0.00    2475.51 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_24/U65/Z (SC8T_OR2X1_CSC28L)
+                                                         33.90    2509.41 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_24/U66/Z (SC8T_AOI21X1_CSC28L)
+                                                         32.02    2541.43 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_24/U72/Z (SC8T_INVX1_CSC28L)
+                                                         21.09    2562.53 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_24/U124/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         37.46    2599.99 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_24/U94/Z (SC8T_INVX1_MR_CSC28L)
+                                                         16.71    2616.71 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_24/U78/Z (SC8T_OAI31X1_CSC28L)
+                                                         20.52    2637.22 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_24/CO (divider_pipe_14_DW01_add_31)
+                                                          0.00    2637.22 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U45/Z (SC8T_INVX1_CSC28L)
+                                                         15.56    2652.79 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U44/Z (SC8T_NR2X2_CSC28L)
+                                                         13.78    2666.57 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U9/Z (SC8T_CKBUFX8_CSC28L)
+                                                         22.72    2689.29 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_mx_PartRem_1_24_0/Z (SC8T_CKMUX2X1_MR_CSC28L)
+                                                         47.63    2736.91 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_23/A[0] (divider_pipe_14_DW01_add_32)
+                                                          0.00    2736.91 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_23/U128/Z (SC8T_OR2X1_CSC28L)
+                                                         26.67    2763.59 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_23/U78/Z (SC8T_AOI21X1_CSC28L)
+                                                         32.25    2795.83 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_23/U124/Z (SC8T_INVX1_CSC28L)
+                                                         23.83    2819.66 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_23/U144/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         38.58    2858.24 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_23/U101/Z (SC8T_INVX1_MR_CSC28L)
+                                                         18.44    2876.68 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_23/U75/Z (SC8T_NR3X2_CSC28L)
+                                                         24.25    2900.93 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_23/U77/Z (SC8T_NR2X2_CSC28L)
+                                                         17.87    2918.80 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_23/U87/Z (SC8T_AOI21X1_MR_CSC28L)
+                                                         20.84    2939.64 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_23/CO (divider_pipe_14_DW01_add_32)
+                                                          0.00    2939.64 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U43/Z (SC8T_INVX1_CSC28L)
+                                                         19.41    2959.05 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U25/Z (SC8T_NR2X4_CSC28L)
+                                                         34.96    2994.01 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_mx_PartRem_1_23_0/Z (SC8T_MUXT2X1P5_CSC28L)
+                                                         52.49    3046.50 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_22/A[0] (divider_pipe_14_DW01_add_33)
+                                                          0.00    3046.50 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_22/U145/Z (SC8T_OR2X1_CSC28L)
+                                                         32.64    3079.14 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_22/U88/Z (SC8T_AOI21X1_CSC28L)
+                                                         32.02    3111.16 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_22/U140/Z (SC8T_INVX1_CSC28L)
+                                                         21.09    3132.26 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_22/U164/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         38.22    3170.48 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_22/U94/Z (SC8T_INVX1_CSC28L)
+                                                         15.57    3186.05 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_22/U163/Z (SC8T_OA31X1_MR_CSC28L)
+                                                         47.81    3233.86 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_22/U100/Z (SC8T_INVX1P5_CSC28L)
+                                                         15.64    3249.50 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_22/U162/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         32.54    3282.04 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_22/CO (divider_pipe_14_DW01_add_33)
+                                                          0.00    3282.04 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U50/Z (SC8T_INVX1_CSC28L)
+                                                         12.48    3294.52 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U49/Z (SC8T_NR2X2_CSC28L)
+                                                         13.14    3307.66 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U15/Z (SC8T_CKINVX4_CSC28L)
+                                                         12.24    3319.90 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U16/Z (SC8T_INVX8_CSC28L)
+                                                         12.62    3332.51 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_mx_PartRem_1_22_0/Z (SC8T_MUXT2X1_MR_CSC28L)
+                                                         29.31    3361.83 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_21/A[0] (divider_pipe_14_DW01_add_34)
+                                                          0.00    3361.83 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_21/U160/Z (SC8T_OR2X1_CSC28L)
+                                                         32.77    3394.60 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_21/U98/Z (SC8T_AOI21X1_CSC28L)
+                                                         32.02    3426.62 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_21/U155/Z (SC8T_INVX1_CSC28L)
+                                                         21.09    3447.72 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_21/U184/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         38.28    3486.00 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_21/U127/Z (SC8T_INVX1_MR_CSC28L)
+                                                         16.16    3502.16 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_21/U183/Z (SC8T_OA31X1_MR_CSC28L)
+                                                         46.77    3548.93 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_21/U97/Z (SC8T_INVX1_CSC28L)
+                                                         19.36    3568.30 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_21/U182/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         34.29    3602.59 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_21/CO (divider_pipe_14_DW01_add_34)
+                                                          0.00    3602.59 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U124/Z (SC8T_INVX1_MR_CSC28L)
+                                                         13.07    3615.66 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U48/Z (SC8T_NR2X2_CSC28L)
+                                                         13.70    3629.36 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U17/Z (SC8T_CKBUFX8_CSC28L)
+                                                         24.66    3654.01 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_mx_PartRem_1_21_1/Z (SC8T_MUX2X0P5_CSC28L)
+                                                         49.50    3703.52 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_20/A[1] (divider_pipe_14_DW01_add_35)
+                                                          0.00    3703.52 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_20/U178/Z (SC8T_AN2X1_CSC28L)
+                                                         39.28    3742.80 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_20/U124/Z (SC8T_AO21X2_CSC28L)
+                                                         36.43    3779.23 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_20/U209/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         39.72    3818.96 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_20/U121/Z (SC8T_INVX1_CSC28L)
+                                                         16.70    3835.65 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_20/U208/Z (SC8T_OA31X1_MR_CSC28L)
+                                                         50.11    3885.76 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_20/U132/Z (SC8T_CKINVX2_CSC28L)
+                                                         16.73    3902.49 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_20/U207/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         30.47    3932.96 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_20/CO (divider_pipe_14_DW01_add_35)
+                                                          0.00    3932.96 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U51/Z (SC8T_INVX1_CSC28L)
+                                                         13.65    3946.61 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U18/Z (SC8T_NR2X3_CSC28L)
+                                                         19.74    3966.35 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U10/Z (SC8T_INVX6_CSC28L)
+                                                         12.84    3979.19 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U11/Z (SC8T_INVX10_CSC28L)
+                                                         12.96    3992.15 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_mx_PartRem_1_20_0/Z (SC8T_CKMUX2X1_CSC28L)
+                                                         45.56    4037.70 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_19/A[0] (divider_pipe_14_DW01_add_36)
+                                                          0.00    4037.70 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_19/U195/Z (SC8T_OR2X1_CSC28L)
+                                                         34.39    4072.09 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_19/U122/Z (SC8T_AOI21X1_CSC28L)
+                                                         32.28    4104.37 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_19/U190/Z (SC8T_INVX1_CSC28L)
+                                                         21.10    4125.47 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_19/U226/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         38.22    4163.69 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_19/U137/Z (SC8T_INVX1_CSC28L)
+                                                         15.57    4179.26 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_19/U225/Z (SC8T_OA31X1_MR_CSC28L)
+                                                         48.82    4228.07 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_19/U147/Z (SC8T_CKINVX2_CSC28L)
+                                                         19.45    4247.52 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_19/U224/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         32.92    4280.44 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_19/CO (divider_pipe_14_DW01_add_36)
+                                                          0.00    4280.44 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U47/Z (SC8T_INVX1_CSC28L)
+                                                          9.94    4290.38 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U21/Z (SC8T_NR2X0P5_CSC28L)
+                                                         13.93    4304.31 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U19/Z (SC8T_INVX3_CSC28L)
+                                                         15.76    4320.08 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U20/Z (SC8T_CKINVX8_CSC28L)
+                                                         15.61    4335.69 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_mx_PartRem_1_19_0/Z (SC8T_CKMUX2X1_MR_CSC28L)
+                                                         49.67    4385.36 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_18/A[0] (divider_pipe_14_DW01_add_37)
+                                                          0.00    4385.36 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_18/U215/Z (SC8T_OR2X1_CSC28L)
+                                                         26.33    4411.70 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_18/U135/Z (SC8T_AOI21X1_CSC28L)
+                                                         32.01    4443.71 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_18/U210/Z (SC8T_INVX1_CSC28L)
+                                                         23.83    4467.54 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_18/U248/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         38.52    4506.06 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_18/U147/Z (SC8T_INVX1_CSC28L)
+                                                         16.70    4522.75 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_18/U247/Z (SC8T_OA31X1_MR_CSC28L)
+                                                         50.11    4572.86 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_18/U159/Z (SC8T_CKINVX2_CSC28L)
+                                                         19.77    4592.64 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_18/U246/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         30.75    4623.38 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_18/CO (divider_pipe_14_DW01_add_37)
+                                                          0.00    4623.38 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U42/Z (SC8T_INVX1_CSC28L)
+                                                          9.48    4632.87 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U24/Z (SC8T_NR2X0P5_CSC28L)
+                                                         24.20    4657.07 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U22/Z (SC8T_INVX3_CSC28L)
+                                                         20.13    4677.20 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U23/Z (SC8T_CKINVX8_CSC28L)
+                                                         18.15    4695.35 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_mx_PartRem_1_18_0/Z (SC8T_CKMUX2X1_MR_CSC28L)
+                                                         46.42    4741.77 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_17/A[0] (divider_pipe_14_DW01_add_38)
+                                                          0.00    4741.77 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_17/U238/Z (SC8T_OR2X1_CSC28L)
+                                                         33.25    4775.02 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_17/U150/Z (SC8T_AOI21X1_CSC28L)
+                                                         32.02    4807.04 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_17/U233/Z (SC8T_INVX1_CSC28L)
+                                                         21.09    4828.14 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_17/U274/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         38.22    4866.36 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_17/U167/Z (SC8T_INVX1_CSC28L)
+                                                         15.57    4881.92 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_17/U273/Z (SC8T_OA31X1_MR_CSC28L)
+                                                         48.82    4930.74 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_17/U179/Z (SC8T_CKINVX2_CSC28L)
+                                                         22.19    4952.93 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_17/U272/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         34.25    4987.18 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_17/CO (divider_pipe_14_DW01_add_38)
+                                                          0.00    4987.18 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U41/Z (SC8T_INVX1_CSC28L)
+                                                         12.48    4999.66 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U40/Z (SC8T_NR2X2_CSC28L)
+                                                         13.36    5013.02 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U14/Z (SC8T_CKBUFX8_CSC28L)
+                                                         26.35    5039.38 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_mx_PartRem_1_17_1/Z (SC8T_MUX2X1_CSC28L)
+                                                         51.74    5091.11 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_16/A[1] (divider_pipe_14_DW01_add_39)
+                                                          0.00    5091.11 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_16/U257/Z (SC8T_AN2X1_CSC28L)
+                                                         39.07    5130.18 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_16/U189/Z (SC8T_AO21X2_CSC28L)
+                                                         36.43    5166.61 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_16/U301/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         39.72    5206.33 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_16/U182/Z (SC8T_INVX1_CSC28L)
+                                                         16.70    5223.03 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_16/U300/Z (SC8T_OA31X1_MR_CSC28L)
+                                                         50.11    5273.14 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_16/U198/Z (SC8T_CKINVX2_CSC28L)
+                                                         22.49    5295.63 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_16/U299/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         32.11    5327.74 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_16/CO (divider_pipe_14_DW01_add_39)
+                                                          0.00    5327.74 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U62/Z (SC8T_ND2X1_MR_CSC28L)
+                                                         24.50    5352.24 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U26/Z (SC8T_INVX4_CSC28L)
+                                                         36.58    5388.82 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_mx_PartRem_1_16_0/Z (SC8T_MUX2X1_A_CSC28L)
+                                                         58.08    5446.89 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_15/A[0] (divider_pipe_14_DW01_add_40)
+                                                          0.00    5446.89 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_15/U264/Z (SC8T_OR2X1_CSC28L)
+                                                         37.31    5484.20 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_15/U227/Z (SC8T_AOI21X2_CSC28L)
+                                                         25.34    5509.54 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_15/U259/Z (SC8T_INVX1_CSC28L)
+                                                         15.65    5525.19 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_15/U304/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         34.72    5559.92 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_15/U162/Z (SC8T_INVX1_MR_CSC28L)
+                                                         14.87    5574.78 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_15/U302/Z (SC8T_OA31X1_MR_CSC28L)
+                                                         56.45    5631.24 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_15/U197/Z (SC8T_INVX2_CSC28L)
+                                                         22.35    5653.59 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_15/U301/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         36.66    5690.25 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_15/U183/Z (SC8T_AO21X2_CSC28L)
+                                                         32.34    5722.59 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_15/CO (divider_pipe_14_DW01_add_40)
+                                                          0.00    5722.59 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U60/Z (SC8T_ND2X1_MR_CSC28L)
+                                                         16.60    5739.19 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U30/Z (SC8T_INVX3_CSC28L)
+                                                         36.74    5775.93 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_mx_PartRem_1_15_0/Z (SC8T_MUX2X1_A_CSC28L)
+                                                         62.59    5838.52 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_14/A[0] (divider_pipe_14_DW01_add_41)
+                                                          0.00    5838.52 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_14/U282/Z (SC8T_OR2X1_CSC28L)
+                                                         26.83    5865.35 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_14/U175/Z (SC8T_AOI21X1_CSC28L)
+                                                         32.25    5897.60 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_14/U277/Z (SC8T_INVX1_CSC28L)
+                                                         23.83    5921.42 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_14/U324/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         35.66    5957.08 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_14/U188/Z (SC8T_INVX1_MR_CSC28L)
+                                                         13.66    5970.74 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_14/U323/Z (SC8T_OA31X1_MR_CSC28L)
+                                                         54.92    6025.66 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_14/U206/Z (SC8T_INVX2_CSC28L)
+                                                         20.47    6046.12 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_14/U322/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         35.82    6081.95 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_14/U190/Z (SC8T_INVX1_MR_CSC28L)
+                                                         11.64    6093.59 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_14/U185/Z (SC8T_OAI31X1_CSC28L)
+                                                         24.43    6118.02 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_14/CO (divider_pipe_14_DW01_add_41)
+                                                          0.00    6118.02 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U67/Z (SC8T_ND2X1_MR_CSC28L)
+                                                         29.33    6147.35 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U31/Z (SC8T_INVX4_CSC28L)
+                                                         41.27    6188.62 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_mx_PartRem_1_14_0/Z (SC8T_MUX2X1_A_CSC28L)
+                                                         60.09    6248.71 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_13/A[0] (divider_pipe_14_DW01_add_42)
+                                                          0.00    6248.71 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_13/U302/Z (SC8T_OR2X1_CSC28L)
+                                                         37.13    6285.84 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_13/U259/Z (SC8T_AOI21X2_CSC28L)
+                                                         25.34    6311.18 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_13/U297/Z (SC8T_INVX1_CSC28L)
+                                                         15.65    6326.83 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_13/U347/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         34.65    6361.48 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_13/U196/Z (SC8T_INVX1_CSC28L)
+                                                         14.29    6375.78 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_13/U345/Z (SC8T_OA31X1_MR_CSC28L)
+                                                         53.97    6429.75 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_13/U207/Z (SC8T_INVX1_CSC28L)
+                                                         27.58    6457.33 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_13/U344/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         42.69    6500.02 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_13/U194/Z (SC8T_INVX1_MR_CSC28L)
+                                                         13.87    6513.89 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_13/U209/Z (SC8T_OAI31X1_CSC28L)
+                                                         19.13    6533.02 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_13/CO (divider_pipe_14_DW01_add_42)
+                                                          0.00    6533.02 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U69/Z (SC8T_ND2X1_MR_CSC28L)
+                                                         22.96    6555.98 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U29/Z (SC8T_INVX4_CSC28L)
+                                                         35.77    6591.75 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_mx_PartRem_1_13_0/Z (SC8T_MUX2X1_A_CSC28L)
+                                                         60.99    6652.74 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_12/A[0] (divider_pipe_14_DW01_add_43)
+                                                          0.00    6652.74 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_12/U318/Z (SC8T_OR2X1_CSC28L)
+                                                         26.80    6679.54 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_12/U200/Z (SC8T_AOI21X1_CSC28L)
+                                                         32.25    6711.79 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_12/U312/Z (SC8T_INVX1_CSC28L)
+                                                         23.83    6735.62 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_12/U364/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         35.66    6771.28 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_12/U235/Z (SC8T_INVX1_MR_CSC28L)
+                                                         13.66    6784.93 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_12/U363/Z (SC8T_OA31X1_MR_CSC28L)
+                                                         53.27    6838.20 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_12/U219/Z (SC8T_INVX1_CSC28L)
+                                                         25.40    6863.60 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_12/U362/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         42.38    6905.98 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_12/U192/Z (SC8T_INVX1_CSC28L)
+                                                         15.13    6921.11 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_12/U221/Z (SC8T_OAI31X1_CSC28L)
+                                                         25.43    6946.53 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_12/CO (divider_pipe_14_DW01_add_43)
+                                                          0.00    6946.53 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U65/Z (SC8T_ND2X1_MR_CSC28L)
+                                                         29.33    6975.86 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U28/Z (SC8T_INVX4_CSC28L)
+                                                         41.59    7017.46 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_mx_PartRem_1_12_0/Z (SC8T_MUXT2X2_CSC28L)
+                                                         52.18    7069.64 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_11/A[0] (divider_pipe_14_DW01_add_44)
+                                                          0.00    7069.64 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_11/U339/Z (SC8T_OR2X1_CSC28L)
+                                                         32.65    7102.28 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_11/U224/Z (SC8T_AOI21X1_CSC28L)
+                                                         32.28    7134.56 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_11/U334/Z (SC8T_INVX1_CSC28L)
+                                                         21.10    7155.66 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_11/U388/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         36.04    7191.69 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_11/U209/Z (SC8T_INVX1_MR_CSC28L)
+                                                         14.87    7206.56 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_11/U386/Z (SC8T_OA31X1_MR_CSC28L)
+                                                         56.45    7263.01 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_11/U236/Z (SC8T_INVX2_CSC28L)
+                                                         22.35    7285.36 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_11/U385/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         42.27    7327.63 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_11/U216/Z (SC8T_INVX1_MR_CSC28L)
+                                                         17.97    7345.60 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_11/U229/Z (SC8T_OAI31X1_CSC28L)
+                                                         23.75    7369.35 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_11/CO (divider_pipe_14_DW01_add_44)
+                                                          0.00    7369.35 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U7/Z (SC8T_ND2X2_CSC28L)
+                                                         20.79    7390.14 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U6/Z (SC8T_INVX1P5_CSC28L)
+                                                         49.54    7439.69 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_mx_PartRem_1_11_5/Z (SC8T_MUXT2X1_MR_CSC28L)
+                                                         51.75    7491.44 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_10/A[5] (divider_pipe_14_DW01_add_45)
+                                                          0.00    7491.44 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_10/U244/Z (SC8T_ND2X1_CSC28L)
+                                                         17.37    7508.81 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_10/U329/Z (SC8T_INVX1_CSC28L)
+                                                         13.68    7522.48 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_10/U243/Z (SC8T_AO21X2_MR_CSC28L)
+                                                         33.12    7555.61 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_10/U226/Z (SC8T_OAI22X1_CSC28L)
+                                                         21.62    7577.23 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_10/U417/Z (SC8T_OA31X1_MR_CSC28L)
+                                                         58.46    7635.69 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_10/U254/Z (SC8T_INVX2_CSC28L)
+                                                         22.35    7658.04 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_10/U416/Z (SC8T_OA22X1_MR_CSC28L)
+                                                         43.74    7701.78 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_10/U415/Z (SC8T_AO222X1_CSC28L)
+                                                         56.89    7758.68 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_10/CO (divider_pipe_14_DW01_add_45)
+                                                          0.00    7758.68 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U109/Z (SC8T_INVX1_MR_CSC28L)
+                                                         13.68    7772.36 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U78/Z (SC8T_NR2X1_CSC28L)
+                                                         14.28    7786.64 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U203/Z (SC8T_INVX1_CSC28L)
+                                                         18.62    7805.26 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/U73/Z (SC8T_INVX1_CSC28L)
+                                                         30.49    7835.76 f
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_mx_PartRem_1_10_6/Z (SC8T_MUX2X1_A_CSC28L)
+                                                         52.09    7887.85 r
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/clk_r_REG16_S3/D (SC8T_DFFRQX1_CSC28L)
+                                                          0.00    7887.85 r
+  data arrival time                                               7887.85
+
+  clock clk (rise edge)                                8000.00    8000.00
+  clock network delay (ideal)                             0.00    8000.00
+  clock uncertainty                                     -80.00    7920.00
+  Silago_top_inst_1_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/clk_r_REG16_S3/CLK (SC8T_DFFRQX1_CSC28L)
+                                                          0.00    7920.00 r
+  library setup time                                    -31.85    7888.15
+  data required time                                              7888.15
+  --------------------------------------------------------------------------
+  data required time                                              7888.15
+  data arrival time                                              -7887.85
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.30
+
+
+1
