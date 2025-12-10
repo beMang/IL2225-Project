@@ -1,0 +1,80 @@
+ 
+****************************************
+Report : cell
+Design : drra_wrapper
+Version: V-2023.12-SP4
+Date   : Wed Dec 10 16:27:15 2025
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+Silago_bot_inst_1_1       Silago_bot_0                    27472.440234
+                                                                    h, n
+Silago_bot_inst_2_1       Silago_bot_5                    27466.516401
+                                                                    h, n
+Silago_bot_inst_3_1       Silago_bot_4                    27508.582316
+                                                                    h, n
+Silago_bot_inst_4_1       Silago_bot_3                    27522.959277
+                                                                    h, n
+Silago_bot_inst_5_1       Silago_bot_2                    27510.445999
+                                                                    h, n
+Silago_bot_inst_6_1       Silago_bot_1                    27459.261361
+                                                                    h, n
+Silago_bot_l_corner_inst_0_1
+                          Silago_bot_left_corner          27647.692720
+                                                                    h, n
+Silago_bot_r_corner_inst_7_1
+                          Silago_bot_right_corner         27308.369846
+                                                                    h, n
+Silago_top_inst_1_0       Silago_top_0                    28155.478965
+                                                                    h, n
+Silago_top_inst_2_0       Silago_top_5                    28090.716087
+                                                                    h, n
+Silago_top_inst_3_0       Silago_top_4                    28127.324089
+                                                                    h, n
+Silago_top_inst_4_0       Silago_top_3                    28158.141365
+                                                                    h, n
+Silago_top_inst_5_0       Silago_top_2                    28136.975287
+                                                                    h, n
+Silago_top_inst_6_0       Silago_top_1                    28105.891769
+                                                                    h, n
+Silago_top_l_corner_inst_0_0
+                          Silago_top_left_corner          27982.356414
+                                                                    h, n
+Silago_top_r_corner_inst_7_0
+                          Silago_top_right_corner         27960.058814
+                                                                    h, n
+U1                        SC8T_TIELOX1_CSC28L
+                                          GF22FDX_SC8T_104CPP_BASE_CSC28L_FFG_0P72V_0P00V_0P00V_0P00V_M40C
+                                                          0.133120  
+U2                        SC8T_CKINVX2_CSC28L
+                                          GF22FDX_SC8T_104CPP_BASE_CSC28L_FFG_0P72V_0P00V_0P00V_0P00V_M40C
+                                                          0.332800  
+U3                        SC8T_CKINVX6_CSC28L
+                                          GF22FDX_SC8T_104CPP_BASE_CSC28L_FFG_0P72V_0P00V_0P00V_0P00V_M40C
+                                                          0.599040  
+U4                        SC8T_BUFX4_MR_CSC28L
+                                          GF22FDX_SC8T_104CPP_BASE_CSC28L_FFG_0P72V_0P00V_0P00V_0P00V_M40C
+                                                          0.465920  
+U5                        SC8T_BUFX4_MR_CSC28L
+                                          GF22FDX_SC8T_104CPP_BASE_CSC28L_FFG_0P72V_0P00V_0P00V_0P00V_M40C
+                                                          0.465920  
+U6                        SC8T_CKBUFX8_CSC28L
+                                          GF22FDX_SC8T_104CPP_BASE_CSC28L_FFG_0P72V_0P00V_0P00V_0P00V_M40C
+                                                          0.998400  
+U7                        SC8T_INVX4_CSC28L
+                                          GF22FDX_SC8T_104CPP_BASE_CSC28L_FFG_0P72V_0P00V_0P00V_0P00V_M40C
+                                                          0.332800  
+U8                        SC8T_CKINVX6_CSC28L
+                                          GF22FDX_SC8T_104CPP_BASE_CSC28L_FFG_0P72V_0P00V_0P00V_0P00V_M40C
+                                                          0.599040  
+--------------------------------------------------------------------------------
+Total 24 cells                                            444617.137984
+1
