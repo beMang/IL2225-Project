@@ -26,16 +26,129 @@
 # The standard way of executing the is from the project_top_folder
 # with the following command
 #
-# $ dc_shell -f ../syn/dc_flat.tcl
+# $ dc_shell -f ../syn/scr/dc_bottomup.tcl
 ################################################################################
 
 
-#EXECUTE N PASSES. DECIDE ON A REASONABLE N.
-proc nth_pass {n} {
-	#Hint: Write constraints for some reasonably big modules. E.g: divider_pipe and silego.
-	
-	#Hint: Compile only the unique tiles
-	
+#Directory variables
+set REPORT_DIR ../syn/rpt; 			# report directory for synthesis reports on timing and area
+set OUT_DIR ../db; 				# output directory for output files: netlist, sdf sdc.
+set SOURCE_DIR ../rtl; 				# source directory with the rtl 
+set SYN_DIR ../syn; 				# synthesis directory
+
+remove_design -all
+
+# load synopsys config
+source ${SYN_DIR}/synopsys_dc.setup
+
+set TOP_NAME drra_wrapper;
+
+proc precompile {name n} {
+	global SOURCE_DIR SYN_DIR OUT_DIR
+	set prev_n [expr {$n - 1}]
+	analyze -format vhdl -lib WORK "${SOURCE_DIR}/mtrf/${name}.vhd"
+    elaborate ${name}
+    current_design ${name}
+    link
+    uniquify
+    source ${SYN_DIR}/constraints.sdc
+    if  {$n > 1} {
+        source ${OUT_DIR}/${name}_${prev_n}.wscr
+    }
 }
 
+#EXECUTE N PASSES. DECIDE ON A REASONABLE N.
+proc nth_pass {n} {
+	global SOURCE_DIR SYN_DIR OUT_DIR TOP_NAME
+	puts "${n} pass"
+    #Hint: Write constraints for some reasonably big modules. E.g: divider_pipe and silego. (divider_pipe ??)
+    #Hint: Compile only the unique tiles
+	
+	#Compile MTRF_cell
+    precompile MTRF_cell $n
+    compile
+	
+	#Compile Silego
+	precompile silego $n
+	dont_touch MTRF_cell true
+	compile
+	
+	#Compile Silago top block
+	set silago_tiles {
+		"Silago_top_left_corner"
+		"Silago_top"
+		"Silago_top_right_corner"
+		"Silago_bot_left_corner"
+		"Silago_bot"
+		"Silago_bot_right_corner"
+	}
+
+	foreach tile $silago_tiles {
+		precompile $tile $n
+		dont_touch MTRF_cell true
+		dont_touch silego true
+		compile
+	}
+
+    #compile drra_wrapper toplevel
+    analyze -format vhdl -lib WORK "${SOURCE_DIR}/mtrf/${TOP_NAME}.vhd"
+    elaborate $TOP_NAME
+    current_design $TOP_NAME
+    link
+    uniquify
+    source ${SYN_DIR}/constraints.sdc
+    
+    #get new names from uniqify for dont_touch
+    set silago_top_instances [get_cells -hierarchical Silago_top* -quiet]
+	set silago_bot_instances [get_cells -hierarchical Silago_bot* -quiet]
+
+	set sub_tiles [list MTRF_cell silego]
+
+	# Combine all instances to a single list
+	set all_instances [concat $sub_tiles $silago_top_instances $silago_bot_instances]
+
+	# Mark them as dont_touch
+	foreach cell $all_instances {
+		dont_touch $cell true
+	}
+
+	# Characterize all blocks
+	#characterize -constraint {MTRF_cell silego Silago_top Silago_bot Silago_top_left_corner Silago_top_right_corner Silago_bot_left_corner }
+    compile
+
+    #check if the constraints are met
+    report_constraint
+    report_area
+    report_power
+    report_timing
+    report_constraint
+    
+    # Save incremental scripts for next pass
+	current_design MTRF_cell
+	write_script > ${OUT_DIR}/MTRF_cell_${n}.wscr
+	current_design silego
+	write_script > ${OUT_DIR}/silego_${n}.wscr
+	foreach tile $silago_tiles {
+		current_design $tile
+		write_script > ${OUT_DIR}/${tile}_${n}.wscr
+	}
+}
+
+# Read files from hierarchy_files
+set hierarchy_files [split [read [open ${SOURCE_DIR}/silego_hierarchy.txt r]] "\n"]
+foreach filename [lrange ${hierarchy_files} 0 end-1] {
+	puts "${filename}"
+	analyze -format vhdl -lib WORK "${SOURCE_DIR}/${filename}"
+}
+
+set N_pass 3
+for {set pass 1} {$pass <= $N_pass} {incr pass} {
+    nth_pass $pass
+}
+
+current_design $TOP_NAME
+report_area > ${REPORT_DIR}/area.txt
+report_power > ${REPORT_DIR}/power.txt
+report_timing > ${REPORT_DIR}/timing.txt
+write_file -format verilog -hier -output ${OUT_DIR}/${TOP_NAME}.v
 
