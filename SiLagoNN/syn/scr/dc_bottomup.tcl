@@ -101,19 +101,16 @@ proc nth_pass {n} {
     #get new names from uniqify for dont_touch
     set silago_top_instances [get_cells -hierarchical Silago_top* -quiet]
 	set silago_bot_instances [get_cells -hierarchical Silago_bot* -quiet]
-
 	set sub_tiles [list MTRF_cell silego]
-
-	# Combine all instances to a single list
-	set all_instances [concat $sub_tiles $silago_top_instances $silago_bot_instances]
-
+	
+	set silago_instances [concat $silago_top_instances $silago_bot_instances]
+	set all_instances [concat $sub_tiles $silago_instances]
+	
 	# Mark them as dont_touch
 	foreach cell $all_instances {
 		dont_touch $cell true
 	}
-
-	# Characterize all blocks
-	#characterize -constraint {MTRF_cell silego Silago_top Silago_bot Silago_top_left_corner Silago_top_right_corner Silago_bot_left_corner }
+	
     compile
 
     #check if the constraints are met
@@ -123,14 +120,17 @@ proc nth_pass {n} {
     report_timing
     report_constraint
     
-    # Save incremental scripts for next pass
-	current_design MTRF_cell
-	write_script > ${OUT_DIR}/MTRF_cell_${n}.wscr
-	current_design silego
-	write_script > ${OUT_DIR}/silego_${n}.wscr
-	foreach tile $silago_tiles {
-		current_design $tile
-		write_script > ${OUT_DIR}/${tile}_${n}.wscr
+    #Characterize blocks
+    foreach inst $silago_instances {
+		characterize -constraint $inst #some instance are not valid (WHY ?)
+	}
+    
+    #save scripts for next pass
+    set unique_designs [list MTRF_cell silego]
+	set unique_designs [concat $unique_designs $silago_tiles]
+	foreach design $unique_designs {
+		current_design $design #top and bot cells are not found
+		write_script > ${OUT_DIR}/${design}_${n}.wscr
 	}
 }
 
@@ -141,7 +141,7 @@ foreach filename [lrange ${hierarchy_files} 0 end-1] {
 	analyze -format vhdl -lib WORK "${SOURCE_DIR}/${filename}"
 }
 
-set N_pass 3
+set N_pass 2
 for {set pass 1} {$pass <= $N_pass} {incr pass} {
     nth_pass $pass
 }
