@@ -1,3 +1,4 @@
+
 ::db::check_and_set_root_attr extract_rc_engine pre_route
 ::db::check_and_set_root_attr add_rings_avoid_short false
 ::db::check_and_set_root_attr add_rings_extend_over_row false
@@ -32,15 +33,22 @@
 ::db::check_and_set_root_attr add_stripes_via_using_exact_crossover_size false
 ::db::check_and_set_root_attr delaycal_enable_high_fanout true
 ::db::check_and_set_root_attr delaycal_ignore_net_load false
-::db::check_and_set_root_attr extract_rc_model_file rc_model.bin
+::db::check_and_set_root_attr extract_rc_model_file ${::IMEX::libVar}/misc/rc_model.bin
 ::db::check_and_set_root_attr floorplan_default_tech_site SC8T_104CPP_CMOS22FDX
 ::db::check_and_set_root_attr floorplan_max_io_height false
 ::db::check_and_set_root_attr opt_drv_margin 0.0
+::db::check_and_set_root_attr opt_fix_drv true
 ::db::check_and_set_root_attr opt_preserve_all_sequential false
+::db::check_and_set_root_attr opt_setup_target_slack 0.0
 ::db::check_and_set_root_attr opt_useful_skew_eco_route false
+::db::check_and_set_root_attr opt_view_pruning_hold_views_active_list { AVF_RCBEST AVF_RCTYP }
+::db::check_and_set_root_attr opt_view_pruning_setup_views_active_list { AVF_RCWORST }
+::db::check_and_set_root_attr opt_view_pruning_setup_views_persistent_list { AVF_RCWORST}
+::db::check_and_set_root_attr opt_view_pruning_tdgr_setup_views_persistent_list { AVF_RCWORST}
 ::db::check_and_set_root_attr place_detail_dpt_flow true
 ::db::check_and_set_root_attr route_design_detail_use_lef_pin_taper_rule true
 ::db::check_and_set_root_attr route_design_extract_third_party_compatible false
+::db::check_and_set_root_attr route_design_global_exp_timing_driven_std_delay 10.6
 ::db::check_and_set_root_attr route_design_global_exp_timing_driven_use_tif_timing_engine_for_import_design false
 ::db::check_and_set_root_attr route_early_global_secondary_pg false
 ::db::check_and_set_root_attr route_special_via_connect_to_shape noshape

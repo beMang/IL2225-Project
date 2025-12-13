@@ -6,7 +6,7 @@ Power Net Detected:
 Using Power View: AVF_RCWORST.
 AAE_INFO: opIsDesignInPostRouteState() is 1
 AAE_INFO: deleting AAE DB due to opIsDesignInPostRouteState() is changed ...
-AAE DB initialization (MEM=13275.7 CPU=0:00:01.9 REAL=0:00:02.0) 
+AAE DB initialization (MEM=13794.6 CPU=0:00:01.9 REAL=0:00:02.0) 
 #################################################################################
 # Design Stage: PostRoute
 # Design Name: drra_wrapper
@@ -15,7 +15,7 @@ AAE DB initialization (MEM=13275.7 CPU=0:00:01.9 REAL=0:00:02.0)
 # Parasitics Mode: No SPEF/RCDB 
 # Signoff Settings: SI Off 
 #################################################################################
-Extraction called for design 'drra_wrapper' of instances=595954 and nets=645337 using extraction engine 'pre_route' .
+Extraction called for design 'drra_wrapper' of instances=645521 and nets=696637 using extraction engine 'pre_route' .
 **WARN: (IMPEXT-3530):	The process node is not set. Use the command set_design_mode -process <process node> prior to extraction for maximum accuracy and optimal automatic threshold setting.
 Type 'man IMPEXT-3530' for more detail.
 pre_route RC Extraction called for design drra_wrapper.
@@ -31,13 +31,13 @@ PreRoute extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
 Using Quantus QRC technology file ...
 Updating RC grid for preRoute extraction ...
 Initializing multi-corner resistance tables ...
-PreRoute RC Extraction DONE (CPU Time: 0:00:31.0  Real Time: 0:00:29.0  MEM: 13249.668M)
+PreRoute RC Extraction DONE (CPU Time: 0:00:28.4  Real Time: 0:00:27.0  MEM: 13794.578M)
 Calculate delays in BcWc mode...
-Start delay calculation (fullDC) (8 T). (MEM=13438.2)
-Total number of fetched objects 632259
+Start delay calculation (fullDC) (8 T). (MEM=14172.9)
+Total number of fetched objects 678392
 AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
-End delay calculation. (MEM=14355.4 CPU=0:05:00 REAL=0:00:38.0)
-End delay calculation (fullDC). (MEM=14355.4 CPU=0:05:54 REAL=0:00:58.0)
+End delay calculation. (MEM=15034.1 CPU=0:05:00 REAL=0:00:38.0)
+End delay calculation (fullDC). (MEM=15034.1 CPU=0:05:57 REAL=0:00:59.0)
 
 Begin Power Analysis
 
@@ -56,52 +56,52 @@ Use 'globalNetConnect' to define rail connections.
 
 Begin Processing Timing Library for Power Calculation
 
-Ended Processing Timing Library for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=10622.96MB/15822.68MB/12395.24MB)
+Ended Processing Timing Library for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=11368.36MB/16491.75MB/12820.53MB)
 
 
 
 Begin Processing Power Net/Grid for Power Calculation
 
-Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=10622.96MB/15822.68MB/12395.24MB)
+Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=11368.36MB/16491.75MB/12820.53MB)
 
 Begin Processing Timing Window Data for Power Calculation
 
 clk(50MHz) CK: assigning clock clk to net clk
-Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:10, real=0:00:10, mem(process/total/peak)=10666.01MB/15822.68MB/12395.24MB)
+Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:11, real=0:00:11, mem(process/total/peak)=11407.89MB/16491.75MB/12820.53MB)
 
 Begin Processing User Attributes
 
-Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=10666.14MB/15822.68MB/12395.24MB)
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=11408.02MB/16491.75MB/12820.53MB)
 
 Begin Processing Signal Activity
 
 
 Starting Levelizing
-2025-Dec-12 20:18:25 (2025-Dec-12 20:18:25 GMT)
-2025-Dec-12 20:18:26 (2025-Dec-12 20:18:26 GMT): 10%
-2025-Dec-12 20:18:26 (2025-Dec-12 20:18:26 GMT): 20%
-2025-Dec-12 20:18:27 (2025-Dec-12 20:18:27 GMT): 30%
-2025-Dec-12 20:18:28 (2025-Dec-12 20:18:28 GMT): 40%
-2025-Dec-12 20:18:28 (2025-Dec-12 20:18:28 GMT): 50%
-2025-Dec-12 20:18:29 (2025-Dec-12 20:18:29 GMT): 60%
-2025-Dec-12 20:18:30 (2025-Dec-12 20:18:30 GMT): 70%
-2025-Dec-12 20:18:30 (2025-Dec-12 20:18:30 GMT): 80%
-2025-Dec-12 20:18:31 (2025-Dec-12 20:18:31 GMT): 90%
+2025-Dec-13 02:12:30 (2025-Dec-13 02:12:30 GMT)
+2025-Dec-13 02:12:31 (2025-Dec-13 02:12:31 GMT): 10%
+2025-Dec-13 02:12:32 (2025-Dec-13 02:12:32 GMT): 20%
+2025-Dec-13 02:12:32 (2025-Dec-13 02:12:32 GMT): 30%
+2025-Dec-13 02:12:33 (2025-Dec-13 02:12:33 GMT): 40%
+2025-Dec-13 02:12:34 (2025-Dec-13 02:12:34 GMT): 50%
+2025-Dec-13 02:12:34 (2025-Dec-13 02:12:34 GMT): 60%
+2025-Dec-13 02:12:35 (2025-Dec-13 02:12:35 GMT): 70%
+2025-Dec-13 02:12:35 (2025-Dec-13 02:12:35 GMT): 80%
+2025-Dec-13 02:12:36 (2025-Dec-13 02:12:36 GMT): 90%
 
 Finished Levelizing
-2025-Dec-12 20:18:34 (2025-Dec-12 20:18:34 GMT)
+2025-Dec-13 02:12:40 (2025-Dec-13 02:12:40 GMT)
 
 Starting Activity Propagation
-2025-Dec-12 20:18:34 (2025-Dec-12 20:18:34 GMT)
+2025-Dec-13 02:12:40 (2025-Dec-13 02:12:40 GMT)
 ** INFO:  (VOLTUS_POWR-1356): No default input activity has been set. Defaulting to 0.2.
 Use 'set_default_switching_activity -input_activity' command to change the default activity value.
 
-2025-Dec-12 20:18:46 (2025-Dec-12 20:18:46 GMT): 10%
-2025-Dec-12 20:18:52 (2025-Dec-12 20:18:52 GMT): 20%
+2025-Dec-13 02:12:51 (2025-Dec-13 02:12:51 GMT): 10%
+2025-Dec-13 02:12:57 (2025-Dec-13 02:12:57 GMT): 20%
 
 Finished Activity Propagation
-2025-Dec-12 20:19:21 (2025-Dec-12 20:19:21 GMT)
-Ended Processing Signal Activity: (cpu=0:01:01, real=0:01:01, mem(process/total/peak)=10674.55MB/15822.68MB/12395.24MB)
+2025-Dec-13 02:13:25 (2025-Dec-13 02:13:25 GMT)
+Ended Processing Signal Activity: (cpu=0:01:01, real=0:01:00, mem(process/total/peak)=11435.11MB/16491.75MB/12820.53MB)
 
 Begin Power Computation
 
@@ -117,61 +117,71 @@ SC8T_TIELOX1_CSC28L                       internal power,
 
 
 Starting Calculating power
-2025-Dec-12 20:19:22 (2025-Dec-12 20:19:22 GMT)
-  Cannot locate supply power rail for net 'CTS_470' of instance
-CTS_ccl_buf_01872
-  Cannot locate supply power rail for net 'CTS_469' of instance
-CTS_ccl_buf_01871
-  Cannot locate supply power rail for net 'CTS_468' of instance
-CTS_ccl_buf_01869
-  Cannot locate supply power rail for net 'CTS_467' of instance
-CTS_ccl_buf_01860
-  Cannot locate supply power rail for net 'CTS_466' of instance
-CTS_ccl_buf_01853
+2025-Dec-13 02:13:26 (2025-Dec-13 02:13:26 GMT)
+  Cannot locate supply power rail for net
+'Silago_top_inst_3_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/FE_RN_31788_0'
+of instance
+Silago_top_inst_3_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/FE_RC_42024_0
+  Cannot locate supply power rail for net
+'Silago_top_inst_3_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/FE_RN_31787_0'
+of instance
+Silago_top_inst_3_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/FE_RC_42025_0
+  Cannot locate supply power rail for net
+'Silago_top_inst_3_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/FE_RN_31786_0'
+of instance
+Silago_top_inst_3_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/FE_RC_42026_0
+  Cannot locate supply power rail for net
+'Silago_top_inst_3_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/FE_RN_31785_0'
+of instance
+Silago_top_inst_3_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/FE_RC_42027_0
+  Cannot locate supply power rail for net
+'Silago_top_inst_3_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/FE_RN_31784_0'
+of instance
+Silago_top_inst_3_0/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/FE_RC_42028_0
   only first five unconnected nets are listed...
 ** WARN:  (VOLTUS_POWR-2047): The following cell(s) power_level (rail net name) cannot be mapped. Check if the connections of the power/ground pin to the external rails have been specified. The power will be distributed to the default rail.
 
 POWER LEVEL         CELL                              INSTANCE
-VDD                 SC8T_BUFX10_CSC28L                CTS_ccl_a_buf_01507
-VDD                 SC8T_BUFX12_CSC28L                CTS_ccl_a_buf_01506
-VDD                 SC8T_BUFX16_CSC28L                CTS_ccl_a_buf_01340
-VDD                 SC8T_BUFX8_CSC28L                 CTS_ccl_a_buf_01805
-VDD                 SC8T_BUFX20_CSC28L                CTS_ccl_a_buf_01336
-VDD                 SC8T_BUFX1P5_CSC28L               CTS_cdb_buf_01900
-VDD                 SC8T_BUFX3_CSC28L                 CTS_ccl_a_buf_01827
-VDD                 SC8T_BUFX24_CSC28L                CTS_ccl_buf_01869
-VDD                 SC8T_BUFX6_CSC28L                 CTS_ccl_buf_01848
-VDD                 SC8T_BUFX4_CSC28L                 CTS_ccl_buf_01868
-2025-Dec-12 20:19:47 (2025-Dec-12 20:19:47 GMT): 10%
-2025-Dec-12 20:19:48 (2025-Dec-12 20:19:48 GMT): 20%
-2025-Dec-12 20:19:50 (2025-Dec-12 20:19:50 GMT): 30%
-2025-Dec-12 20:19:51 (2025-Dec-12 20:19:51 GMT): 40%
-2025-Dec-12 20:19:53 (2025-Dec-12 20:19:53 GMT): 50%
-2025-Dec-12 20:19:55 (2025-Dec-12 20:19:55 GMT): 60%
-2025-Dec-12 20:19:55 (2025-Dec-12 20:19:55 GMT): 70%
-2025-Dec-12 20:19:56 (2025-Dec-12 20:19:56 GMT): 80%
-2025-Dec-12 20:19:57 (2025-Dec-12 20:19:57 GMT): 90%
+VDD                 SC8T_BUFX2_CSC28L                 FE_OFC24788_FE_OFN1494_rst_n
+VDD                 SC8T_BUFX10_CSC28L                FE_USKC24866_CTS_70
+VDD                 SC8T_BUFX0P5_A_CSC28L             FE_USKC24865_CTS_70
+VDD                 SC8T_BUFX1_MR_CSC28L              FE_USKC24863_CTS_70
+VDD                 SC8T_BUFX1P5_CSC28L               FE_USKC24858_CTS_265
+VDD                 SC8T_BUFX12_CSC28L                FE_USKC24856_CTS_85
+VDD                 SC8T_CKBUFX12_CSC28L              FE_USKC24847_CTS_5
+VDD                 SC8T_BUFX6_CSC28L                 FE_USKC24846_CTS_6
+VDD                 SC8T_CKBUFX2_CSC28L               FE_USKC24845_CTS_76
+VDD                 SC8T_BUFX16_CSC28L                FE_USKC24839_CTS_16
+2025-Dec-13 02:13:57 (2025-Dec-13 02:13:57 GMT): 10%
+2025-Dec-13 02:13:59 (2025-Dec-13 02:13:59 GMT): 20%
+2025-Dec-13 02:14:00 (2025-Dec-13 02:14:00 GMT): 30%
+2025-Dec-13 02:14:02 (2025-Dec-13 02:14:02 GMT): 40%
+2025-Dec-13 02:14:04 (2025-Dec-13 02:14:04 GMT): 50%
+2025-Dec-13 02:14:05 (2025-Dec-13 02:14:05 GMT): 60%
+2025-Dec-13 02:14:05 (2025-Dec-13 02:14:05 GMT): 70%
+2025-Dec-13 02:14:06 (2025-Dec-13 02:14:06 GMT): 80%
+2025-Dec-13 02:14:07 (2025-Dec-13 02:14:07 GMT): 90%
 
 Finished Calculating power
-2025-Dec-12 20:19:57 (2025-Dec-12 20:19:57 GMT)
+2025-Dec-13 02:14:07 (2025-Dec-13 02:14:07 GMT)
       # of MSMV cell(s) missing power_level: 0
-Ended Power Computation: (cpu=0:02:06, real=0:00:35, mem(process/total/peak)=10691.39MB/15910.72MB/12395.24MB)
+Ended Power Computation: (cpu=0:02:07, real=0:00:41, mem(process/total/peak)=11460.59MB/16579.79MB/12820.53MB)
 
 Begin Processing User Attributes
 
-Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=10691.52MB/15910.72MB/12395.24MB)
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=11460.71MB/16579.79MB/12820.53MB)
 
-Ended Power Analysis: (cpu=0:03:22, real=0:01:50, mem(process/total/peak)=10691.57MB/15910.72MB/12395.24MB)
+Ended Power Analysis: (cpu=0:03:24, real=0:01:57, mem(process/total/peak)=11460.77MB/16579.79MB/12820.53MB)
 
 Begin Boundary Leakage Calculation
 Ended Boundary Leakage Calculation: (cpu=0:00:00, real=0:00:00,
-mem(process/total/peak)=10691.57MB/15910.72MB/12395.24MB)
+mem(process/total/peak)=11460.77MB/16579.79MB/12820.53MB)
 Begin Static Power Report Generation
 *----------------------------------------------------------------------------------------
 *	Innovus 21.19-s058_1 (64bit) 04/04/2024 09:59 (Linux 3.10.0-693.el7.x86_64)
 *	
 *
-* 	Date & Time:	2025-Dec-12 20:19:58 (2025-Dec-12 20:19:58 GMT)
+* 	Date & Time:	2025-Dec-13 02:14:08 (2025-Dec-13 02:14:08 GMT)
 *
 *----------------------------------------------------------------------------------------
 *
@@ -213,39 +223,39 @@ Begin Static Power Report Generation
 
 Total Power
 -----------------------------------------------------------------------------------------
-Total Internal Power:        9.53211588 	   46.7119%
-Total Switching Power:       7.61384895 	   37.3115%
-Total Leakage Power:         3.26021545 	   15.9766%
-Total Power:                20.40618027
+Total Internal Power:        9.82253072 	   45.3143%
+Total Switching Power:       8.23300092 	   37.9813%
+Total Leakage Power:         3.62092473 	   16.7044%
+Total Power:                21.67645638
 -----------------------------------------------------------------------------------------
 
 
 Group                           Internal   Switching     Leakage       Total  Percentage 
                                 Power      Power         Power         Power  (%)        
 -----------------------------------------------------------------------------------------
-Sequential                          6.78      0.8608       1.142       8.783       43.04
+Sequential                         6.796      0.7896       1.149       8.734       40.29
 Macro                                  0           0           0           0           0
-IO                                     0           0    1.19e-06    1.19e-06   5.831e-06
-Combinational                      2.496        4.77       2.093       9.359       45.87
-Clock (Combinational)             0.2555       1.983     0.02574       2.264        11.1
+IO                                     0           0   3.996e-07   3.996e-07   1.844e-06
+Combinational                      2.758       5.428       2.445       10.63       49.04
+Clock (Combinational)             0.2689       2.016     0.02721       2.312       10.66
 Clock (Sequential)                     0           0           0           0           0
 -----------------------------------------------------------------------------------------
-Total                              9.532       7.614        3.26       20.41         100
+Total                              9.823       8.233       3.621       21.68         100
 -----------------------------------------------------------------------------------------
 
 
 Rail                  Voltage   Internal   Switching     Leakage       Total  Percentage 
                                 Power      Power         Power         Power  (%)        
 -----------------------------------------------------------------------------------------
-Default                  0.72      9.532       7.614        3.26       20.41         100
+Default                  0.72      9.823       8.233       3.621       21.68         100
 
 
 Clock                           Internal   Switching     Leakage       Total  Percentage 
                                 Power      Power         Power         Power  (%)        
 -----------------------------------------------------------------------------------------
-clk                               0.2555       1.983     0.02574       2.264        11.1
+clk                               0.2689       2.016     0.02721       2.312       10.66
 -----------------------------------------------------------------------------------------
-Total                             0.2555       1.983     0.02574       2.264        11.1
+Total                             0.2689       2.016     0.02721       2.312       10.66
 -----------------------------------------------------------------------------------------
 Clock: clk
 Clock Period: 0.020000 usec 
@@ -256,10 +266,10 @@ Clock Static Probability:  0.5000
  
 -----------------------------------------------------------------------------------------
 *	Power Distribution Summary: 
-*              Highest Average Power:       CTS_ccl_a_buf_01028 (SC8T_BUFX16_CSC28L):         0.003423
-*              Highest Leakage Power:         CTS_ccl_buf_01869 (SC8T_BUFX24_CSC28L):        5.805e-05
-*                Total Cap:      2.14892e-09 F
-*                Total instances in design: 595954
+*              Highest Average Power: Silago_bot_inst_2_1/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/CTS_ccl_a_buf_00565 (SC8T_BUFX24_CSC28L):         0.003656
+*              Highest Leakage Power: Silago_bot_inst_1_1/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/FE_RC_31140_0 (SC8T_CKND2X16_CSC28L):        7.949e-05
+*                Total Cap:      2.34364e-09 F
+*                Total instances in design: 645521
 *                Total instances in design with no power:     0
 *                Total instances in design with no activty:     0
 
@@ -269,5 +279,5 @@ Clock Static Probability:  0.5000
 ** INFO:  (VOLTUS_POWR-3465): There are 0 decaps and 0 fillers in the design
 
 Ended Static Power Report Generation: (cpu=0:00:11, real=0:00:11,
-mem(process/total/peak)=10761.75MB/15910.72MB/12395.24MB)
+mem(process/total/peak)=11643.19MB/16691.79MB/12820.53MB)
 

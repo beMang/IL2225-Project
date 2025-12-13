@@ -1,3 +1,5 @@
 work/
 exe/
 .ipynb_checkpoints/
+syn/db/flat_sweep/
+*.dat/

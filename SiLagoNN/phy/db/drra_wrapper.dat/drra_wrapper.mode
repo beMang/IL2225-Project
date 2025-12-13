@@ -1,17 +1,29 @@
+if {![namespace exists ::IMEX]} { namespace eval ::IMEX {} }
+set ::IMEX::dataVar [file dirname [file normalize [info script]]]
+set ::IMEX::libVar ${::IMEX::dataVar}/libs
+
 catch { setAnalysisMode -analysisType bcwc }
 catch { setAnalysisMode -clkSrcPath true }
 catch { setAnalysisMode -clockPropagation sdcControl }
 catch { setAnalysisMode -virtualIPO false }
+catch { setOptMode -activeHoldViews { AVF_RCBEST AVF_RCTYP } }
+catch { setOptMode -activeSetupViews { AVF_RCWORST } }
+catch { setOptMode -autoSetupViews { AVF_RCWORST} }
+catch { setOptMode -autoTDGRSetupViews { AVF_RCWORST} }
 catch { setOptMode -drcMargin 0 }
+catch { setOptMode -fixDrc true }
 catch { setOptMode -preserveAllSequential false }
+catch { setOptMode -setupTargetSlack 0 }
+catch { setPathGroupOptions default -late -slackAdjustment -0 }
 catch { setPathGroupOptions reg2reg -effortLevel high -weight 2 }
 catch { setPathGroupOptions reg2reg -late -slackAdjustment -0 }
 catch { setExtractRCMode  -engine preRoute }
 catch {setNanoRouteMode -quiet -drouteUseLefPinTaperRule true}
-catch {setNanoRouteMode -quiet -extractRcModelFile "rc_model.bin"}
+catch {setNanoRouteMode -quiet -extractRcModelFile "${::IMEX::libVar}/misc/rc_model.bin"}
 catch {setNanoRouteMode -quiet -extractThirdPartyCompatible false}
+catch {setNanoRouteMode -quiet -grouteExpTdStdDelay 10.600000}
 catch {setNanoRouteMode -quiet -grouteExpTdUseTifTimingEngineForImportDesign false}
-catch {setNanoRouteMode -quiet -timingEngine ".timing_file_135145.tif.gz"}
+catch {setNanoRouteMode -quiet -timingEngine ".timing_file_148553.tif.gz"}
 
 catch { setPlaceMode -place_detail_dpt_flow true }
 catch { setIlmMode -keepHighFanoutPorts true -keepLoopBack false -keepInstInSdc false -keepFlatten true }

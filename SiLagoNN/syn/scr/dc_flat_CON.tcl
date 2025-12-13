@@ -37,9 +37,13 @@ compile -map_effort medium
 
 
 puts "$LOGID Report"
-report_constraints 	> ${REPORT_DIR}/${TOP_NAME}_constratints_${con}.sdc
-report_area 		> ${REPORT_DIR}/${TOP_NAME}_area_${con}.txt
-report_cell 		> ${REPORT_DIR}/${TOP_NAME}_cells_${con}.txt
-report_timing 		> ${REPORT_DIR}/${TOP_NAME}_timing_${con}.txt
-report_power 		> ${REPORT_DIR}/${TOP_NAME}_power_${con}.txt
+#report_constraints 	> ${REPORT_DIR}/${TOP_NAME}_constratints_${con}.sdc
+#report_area 		> ${REPORT_DIR}/${TOP_NAME}_area_${con}.txt
+#report_cell 		> ${REPORT_DIR}/${TOP_NAME}_cells_${con}.txt
+#report_timing 		> ${REPORT_DIR}/${TOP_NAME}_timing_${con}.txt
+#report_power 		> ${REPORT_DIR}/${TOP_NAME}_power_${con}.txt
+
+puts "$LOGID Export netlist"
+write -hierarchy -format ddc     -output ${OUT_DIR}/${TOP_NAME}_${con}.ddc
+write -hierarchy -format verilog -output ${OUT_DIR}/${TOP_NAME}_${con}.v
 
