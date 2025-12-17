@@ -3,3 +3,4 @@ exe/
 .ipynb_checkpoints/
 syn/db/flat_sweep/
 *.dat/
+SiLagoNN/phy/db/flat_sweep/
