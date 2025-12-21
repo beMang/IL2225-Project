@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Wed Dec 17 13:01:01 2025                
+#  Created on Wed Dec 17 18:13:14 2025                
 #                                                     
 #######################################################
 
@@ -13,7 +13,7 @@
 #@(#)CDS: CPE v21.19-s026
 #@(#)CDS: IQuantus/TQuantus 21.1.1-s966 (64bit) Wed Mar 8 10:22:20 PST 2023 (Linux 3.10.0-693.el7.x86_64)
 
-set con 12000;
+set con 8000;
 #@ source ../phy/scr/flat_CON.tcl
 #@ Begin verbose source (pre): source ../phy/scr/flat_CON.tcl
 set LOGID @\[IL2225-Project\]
