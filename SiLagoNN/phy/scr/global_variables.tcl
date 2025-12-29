@@ -10,9 +10,6 @@ set SCR_DIR    "../phy/scr"
 set PART_DIR   "../phy/db/part"
 set SRC_DIR    "../syn/db"
 
-# Obsolete
-# set LEF_FILE "/opt/pdk/tsmc90/tcbn90g_110a/digital/Back_End/lef/tcbn90g_110a/lef/tcbn90g_9lm.lef"
-
 set STDC_CCS_DIR  "/opt/pdk/gfip/22FDX-EXT/GF22FDX_SC8T_104CPP_BASE_CSC28L_FDK_RELV06R60/model/timing/ccs"
 set TECH_LEF_DIR  "/opt/pdk/gf22/V1.0_4.1/PlaceRoute/Innovus/Techfiles/10M_2Mx_4Cx_2Bx_2Jx_LB"
 set STDC_LEF_DIR  "/opt/pdk/gfip/22FDX-EXT/GF22FDX_SC8T_104CPP_BASE_CSC28L_FDK_RELV06R60/lef"
@@ -50,3 +47,39 @@ set QRC_FILE_WC "${STDC_QRC_DIR}/FuncRCmaxDP/qrcTechFile"
 set MMMC_FILE          "${SCR_DIR}/mmmc.tcl"
 set NETLIST_FILE       "${SRC_DIR}/${TOP_NAME}.v"
 set SDC_FILES          "${SRC_DIR}/${TOP_NAME}.sdc"
+
+set all_partition_hinst_list {
+	Silago_top_l_corner_inst_0_0 \
+	Silago_top_inst_1_0 \
+	Silago_top_inst_2_0 \
+	Silago_top_inst_3_0 \
+	Silago_top_inst_4_0 \
+	Silago_top_inst_5_0 \
+	Silago_top_inst_6_0 \
+	Silago_top_r_corner_inst_7_0 \
+	Silago_bot_l_corner_inst_0_1 \
+	Silago_bot_inst_1_1 \
+	Silago_bot_inst_2_1 \
+	Silago_bot_inst_3_1 \
+	Silago_bot_inst_4_1 \
+	Silago_bot_inst_5_1 \
+	Silago_bot_inst_6_1 \
+	Silago_bot_r_corner_inst_7_1 }
+
+set partition_module_list {
+	Silago_top_left_corner \
+	Silago_top_0 \
+	Silago_top_1 \
+	Silago_top_2 \
+	Silago_top_3 \
+	Silago_top_4 \
+	Silago_top_5 \
+	Silago_top_right_corner \
+	Silago_bot_left_corner \
+	Silago_bot_0 \
+	Silago_bot_1 \
+	Silago_bot_2 \
+	Silago_bot_3 \
+	Silago_bot_4 \
+	Silago_bot_5 \
+	Silago_bot_right_corner }
