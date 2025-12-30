@@ -58,9 +58,9 @@ set all_partition_module_list {
 
 set master_partition_module_list {
 	Silago_top_left_corner \
-	Silago_top_0 \
+	Silago_top_5 \
 	Silago_top_right_corner \
 	Silago_bot_left_corner \
-	Silago_bot_0 \
+	Silago_bot_5 \
 	Silago_bot_right_corner }
 

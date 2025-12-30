@@ -7,11 +7,11 @@ foreach part_hinst ${master_partition_hinst_list} {
 }
 
 foreach part_hinst ${clone_partition_top_hinst_list} {
-    create_partition -hinst ${part_hinst} -copy_from Silago_top_0
+    create_partition -hinst ${part_hinst} -copy_from Silago_top_5
 }
 
 foreach part_hinst ${clone_partition_bot_hinst_list} {
-    create_partition -hinst ${part_hinst} -copy_from Silago_bot_0
+    create_partition -hinst ${part_hinst} -copy_from Silago_bot_5
 }
 
 align_partition_clones -update_user_grid -pg_horizontal_grid -pg_vertical_grid
@@ -28,4 +28,6 @@ create_timing_budget -partitions ${master_partition_module_list}
 commit_partitions
 
 write_partitions ${master_partition_module_list} -dir ${PART_DIR} -def
+
+write_partitions drra_wrapper -dir ${PART_DIR} -def
 
