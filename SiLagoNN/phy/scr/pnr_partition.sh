@@ -3,7 +3,7 @@
 #3. The script simply triggers pnr_parititon.tcl script for all the partitions in the part directory at once.
 #4. It is not required to use this script for this project. But interested students can use it and see the benefits of automating tasks.
 #5. Feel free to use Google or ChatGPT to understand the commands :)
-
+TOP_NAME="drra_wrapper"
 partition_list="$(ls ../phy/db/part/*enc | grep -v ${TOP_NAME})"
 
 for partition in ${partition_list}
@@ -14,7 +14,8 @@ do
 	cd ${partition}.dat
 	rm -rf pnr 
 	mkdir pnr 
-	nohup innovus -stylus -no_gui -batch -files ../../../scr/pnr_partition.tcl -log "../../../../log/pnr_${filename}_${TIMESTAMP}.log ../../../../log/pnr_part_${filename}_${TIMESTAMP}.cmd ../../../../log/pnr_part_${filename}_${TIMESTAMP}.logv" &
+	echo $filename	
+	nohup innovus -stylus -no_gui -batch -files ../../../scr/pnr_partition.tcl -log "../../../../exe/log/pnr/pnr_${filename}_${TIMESTAMP}.log ../../../../exe/log/pnr/pnr_part_${filename}_${TIMESTAMP}.cmd ../../../../exe/log/pnr/pnr_part_${filename}_${TIMESTAMP}.logv" -overwrite &
 	cd ../../../../exe
 done
 
