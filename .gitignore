@@ -5,3 +5,4 @@ syn/db/flat_sweep/
 *.dat/
 SiLagoNN/phy/db/flat_sweep/
 SiLagoNN/phy/db/part/
+SiLagoNN/phy/db/NOTWORKINGpart/
