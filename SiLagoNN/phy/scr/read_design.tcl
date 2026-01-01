@@ -2,8 +2,7 @@
 source ../phy/scr/global_variables.tcl
 
 #2. source design variables
-set_multi_cpu_usage -local_cpu ${NUM_CPUS} -cpu_per_remote_host 1 -remote_host 0 -keep_license true
-set_distributed_hosts -local
+source ../phy/scr/design_variables.tcl
 
 #3. set vdd net
 set_db init_power_nets {VDD}

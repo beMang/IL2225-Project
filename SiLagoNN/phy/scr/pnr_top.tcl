@@ -5,13 +5,13 @@ cd ../phy/db/part
 read_db ${TOP_NAME}
 
 foreach module $master_partition_module_list {
-	#1. read ilm master partitions
+	read_ilm -cell $module -dir ${module}/ilm
 }
-#2. flatten ilms
+flatten_ilm
 
-#3. place 
-#4. ccopt
-#5. route
+place_design
+ccopt_design
+route_design -placement_check
 
-#6. write the place and routed db
+write_db ${TOP_NAME}/pnr/
 
