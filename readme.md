@@ -1,10 +1,6 @@
 # How to task 5 and task 6
 
-<<<<<<< HEAD
 **Always** In a terminal in `/SiLagoNN/exe/`. To get the GUI, remove the `-file` arg and use `source` as the first command. 
-=======
-**Always** in a terminal in ```/SiLagoNN/exe/```. To get the GUI, remove the ```-file``` arg and use ```source``` as the first command. 
->>>>>>> fe41b0988a2a8c3f94cd4241c939cc02a8e6b567
 
 ## Create partitions
 
