@@ -1,10 +1,6 @@
-#1. This tiny bash script is for automation of placing and routing the partitions.
-#2. Instead of place and routing the six paritions one by one, you can use this script. 
-#3. The script simply triggers pnr_parititon.tcl script for all the partitions in the part directory at once.
-#4. It is not required to use this script for this project. But interested students can use it and see the benefits of automating tasks.
-#5. Feel free to use Google or ChatGPT to understand the commands :)
 TOP_NAME="drra_wrapper"
 partition_list="$(ls ../phy/db/part/*enc | grep -v ${TOP_NAME})"
+TIMESTAMP="$(date +"%Y-%m-%d_%H-%M-%S")"
 
 for partition in ${partition_list}
 do
@@ -15,7 +11,13 @@ do
 	rm -rf pnr
 	mkdir pnr 
 	echo $filename	
-	nohup innovus -stylus -no_gui -batch -files ../../../scr/pnr_partition.tcl -log "../../../../exe/log/pnr/pnr_${filename}_${TIMESTAMP}.log ../../../../exe/log/pnr/pnr_part_${filename}_${TIMESTAMP}.cmd ../../../../exe/log/pnr/pnr_part_${filename}_${TIMESTAMP}.logv" -overwrite &
+	nohup innovus -stylus \
+                      -no_gui \
+                      -batch \
+                      -files ../../../scr/pnr_partition.tcl \
+                      -log "../../../../ex/log/pnr/pnr_${filename}_${TIMESTAMP}.log \
+                            ../../../../exe/log/pnr/pnr_part_${filename}_${TIMESTAMP}.cmd \
+                            ../../../../exe/log/pnr/pnr_part_${filename}_${TIMESTAMP}.logv" \
+                      -overwrite &
 	cd ../../../../exe
 done
-

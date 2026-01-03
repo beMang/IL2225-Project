@@ -1,0 +1,305 @@
+
+Power Net Detected:
+        Voltage	    Name
+             0V	    VSS
+          0.72V	    VDD
+Using Power View: AVF_RCWORST.
+Multithreaded Timing Analysis is initialized with 8 threads
+
+AAE_INFO: opIsDesignInPostRouteState() is 1
+AAE DB initialization (MEM=6411.25 CPU=0:00:02.6 REAL=0:00:03.0) 
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: drra_wrapper
+# Design Mode: 90nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Extraction called for design 'drra_wrapper' of instances=611269 and nets=660003 using extraction engine 'pre_route' .
+**WARN: (IMPEXT-3530):	The process node is not set. Use the command set_design_mode -process <process node> prior to extraction for maximum accuracy and optimal automatic threshold setting.
+Type 'man IMPEXT-3530' for more detail.
+pre_route RC Extraction called for design drra_wrapper.
+RC Extraction called in multi-corner(3) mode.
+RCMode: PreRoute
+      RC Corner Indexes            0       1       2   
+Capacitance Scaling Factor   : 1.00000 1.00000 1.00000 
+Resistance Scaling Factor    : 1.00000 1.00000 1.00000 
+Clock Cap. Scaling Factor    : 1.00000 1.00000 1.00000 
+Clock Res. Scaling Factor    : 1.00000 1.00000 1.00000 
+Shrink Factor                : 1.00000
+PreRoute extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+Using Quantus QRC technology file ...
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner resistance tables ...
+PreRoute RC Extraction DONE (CPU Time: 0:00:23.0  Real Time: 0:00:21.0  MEM: 6378.250M)
+Calculate delays in BcWc mode...
+Start delay calculation (fullDC) (8 T). (MEM=7063.91)
+**WARN: (IMPESI-3014):	The RC network is incomplete for net dimarch_silego_data_out[3][1][94]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net dimarch_silego_data_out[6][1][103]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net dimarch_silego_data_out[6][1][94]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net h_bus_reg_seg_0[2][0][13]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net h_bus_reg_seg_0[15][4][13]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net h_bus_reg_seg_0[2][0][0]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net h_bus_reg_seg_0[2][0][1]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net h_bus_reg_seg_0[2][0][10]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net h_bus_dpu_seg_0[2][0][7]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net Silago_bot_l_corner_inst_0_1/FE_OFN102_h_bus_dpu_out_out0_0_right_0. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net Silago_bot_l_corner_inst_0_1/FE_OFN98_h_bus_dpu_out_out0_0_right_0. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net Silago_bot_l_corner_inst_0_1/FE_OFN97_h_bus_dpu_out_out0_0_right_0. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net h_bus_dpu_seg_0[3][0][2]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net Silago_bot_l_corner_inst_0_1/FE_OFN95_h_bus_dpu_out_out0_0_right_0. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net Silago_top_l_corner_inst_0_0/FE_OFN98_h_bus_dpu_out_out0_0_right_0. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net h_bus_reg_seg_1[15][4][14]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net h_bus_dpu_seg_0[15][4][10]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net h_bus_reg_seg_0[15][4][10]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net Silago_bot_r_corner_inst_7_1/FE_OFN92_h_bus_dpu_out_out0_4_left_0. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net Silago_bot_r_corner_inst_7_1/FE_OFN96_h_bus_dpu_out_out0_4_left_0. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+Total number of fetched objects 643400
+AAE_INFO: Total number of nets for which stage creation was skipped for all views 0
+End delay calculation. (MEM=8080.76 CPU=0:05:18 REAL=0:00:40.0)
+End delay calculation (fullDC). (MEM=8080.76 CPU=0:06:23 REAL=0:01:04)
+
+Begin Power Analysis
+
+             0V	    VSS
+          0.72V	    VDD
+
+Warning:
+  There are 2 power/gnd nets that are not connected
+VSS VDD ...
+Use 'globalNetConnect' to define rail connections.
+** WARN:  (VOLTUS_POWR-2035): There are 2 power/gnd nets that are not connected
+VSS VDD ...
+Use 'globalNetConnect' to define rail connections.
+
+
+
+Begin Processing Timing Library for Power Calculation
+
+Ended Processing Timing Library for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=6534.38MB/9534.27MB/6534.38MB)
+
+
+
+Begin Processing Power Net/Grid for Power Calculation
+
+Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=6534.38MB/9534.27MB/6534.38MB)
+
+Begin Processing Timing Window Data for Power Calculation
+
+clk(50MHz) CK: assigning clock clk to net clk
+Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:12, real=0:00:12, mem(process/total/peak)=6716.31MB/9618.27MB/6716.31MB)
+
+Begin Processing User Attributes
+
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=6745.76MB/9647.27MB/6745.89MB)
+
+Begin Processing Signal Activity
+
+
+Starting Levelizing
+2026-Jan-03 07:50:29 (2026-Jan-03 07:50:29 GMT)
+2026-Jan-03 07:50:30 (2026-Jan-03 07:50:30 GMT): 10%
+2026-Jan-03 07:50:31 (2026-Jan-03 07:50:31 GMT): 20%
+2026-Jan-03 07:50:32 (2026-Jan-03 07:50:32 GMT): 30%
+2026-Jan-03 07:50:33 (2026-Jan-03 07:50:33 GMT): 40%
+2026-Jan-03 07:50:33 (2026-Jan-03 07:50:33 GMT): 50%
+2026-Jan-03 07:50:34 (2026-Jan-03 07:50:34 GMT): 60%
+2026-Jan-03 07:50:35 (2026-Jan-03 07:50:35 GMT): 70%
+2026-Jan-03 07:50:36 (2026-Jan-03 07:50:36 GMT): 80%
+2026-Jan-03 07:50:36 (2026-Jan-03 07:50:36 GMT): 90%
+
+Finished Levelizing
+2026-Jan-03 07:50:41 (2026-Jan-03 07:50:41 GMT)
+
+Starting Activity Propagation
+2026-Jan-03 07:50:41 (2026-Jan-03 07:50:41 GMT)
+** INFO:  (VOLTUS_POWR-1356): No default input activity has been set. Defaulting to 0.2.
+Use 'set_default_switching_activity -input_activity' command to change the default activity value.
+
+2026-Jan-03 07:50:56 (2026-Jan-03 07:50:56 GMT): 10%
+2026-Jan-03 07:51:03 (2026-Jan-03 07:51:03 GMT): 20%
+
+Finished Activity Propagation
+2026-Jan-03 07:51:40 (2026-Jan-03 07:51:40 GMT)
+Ended Processing Signal Activity: (cpu=0:01:19, real=0:01:17, mem(process/total/peak)=6843.00MB/9748.57MB/6843.23MB)
+
+Begin Power Computation
+
+      ----------------------------------------------------------
+      # of cell(s) missing both power/leakage table: 0
+      # of cell(s) missing power table: 2
+      # of cell(s) missing leakage table: 0
+      ----------------------------------------------------------
+CellName                                  Missing Table(s)
+SC8T_TIEHIX1_CSC28L                       internal power, 
+SC8T_TIELOX1_CSC28L                       internal power, 
+
+
+
+Starting Calculating power
+2026-Jan-03 07:51:41 (2026-Jan-03 07:51:41 GMT)
+  Cannot locate supply power rail for net
+'Silago_top_r_corner_inst_7_0/h_bus_reg_out_out0_0_right[15]' of instance
+Silago_top_r_corner_inst_7_0/SILEGO_cell/FE_OFC2986_h_bus_reg_in_out0_1_left_15
+  Cannot locate supply power rail for net
+'Silago_top_r_corner_inst_7_0/h_bus_reg_out_out0_0_right[7]' of instance
+Silago_top_r_corner_inst_7_0/SILEGO_cell/FE_OFC854_h_bus_reg_in_out0_1_left_7
+  Cannot locate supply power rail for net
+'Silago_top_r_corner_inst_7_0/h_bus_reg_out_out0_0_right[4]' of instance
+Silago_top_r_corner_inst_7_0/FE_OFC3769_h_bus_reg_in_out0_1_left_4
+  Cannot locate supply power rail for net
+'Silago_top_r_corner_inst_7_0/h_bus_reg_out_out0_1_right[15]' of instance
+Silago_top_r_corner_inst_7_0/SILEGO_cell/MTRF_cell/reg_top/RegisterFile/U4218
+  Cannot locate supply power rail for net
+'Silago_top_r_corner_inst_7_0/h_bus_reg_out_out0_1_right[14]' of instance
+Silago_top_r_corner_inst_7_0/SILEGO_cell/MTRF_cell/reg_top/RegisterFile/U4219
+  only first five unconnected nets are listed...
+** WARN:  (VOLTUS_POWR-2047): The following cell(s) power_level (rail net name) cannot be mapped. Check if the connections of the power/ground pin to the external rails have been specified. The power will be distributed to the default rail.
+
+POWER LEVEL         CELL                              INSTANCE
+VDD                 SC8T_BUFX8_CSC28L                 FE_USKC4585_CTS_10
+VDD                 SC8T_INVX0P5_CSC28L               FE_OFC220_instr_ld_bot_0__0
+VDD                 SC8T_BUFX24_CSC28L                FE_OFC4583_h_bus_reg_seg_1_8_0_0
+VDD                 SC8T_BUFX0P5_A_CSC28L             FE_OFC216_h_bus_reg_seg_0_3__1__13
+VDD                 SC8T_INVX2_CSC28L                 FE_OFC192_h_bus_reg_seg_0_8__0__8
+VDD                 SC8T_INVX1_MR_CSC28L              FE_OFC186_row_right_5__1__1
+VDD                 SC8T_BUFX2_CSC28L                 FE_OFC14_Immediate
+VDD                 SC8T_INVX3_CSC28L                 FE_OFC13_Immediate
+VDD                 SC8T_BUFX4_MR_CSC28L              FE_OFC4_rst_n
+VDD                 SC8T_BUFX3_CSC28L                 FE_OFC2_rst_n
+2026-Jan-03 07:52:13 (2026-Jan-03 07:52:13 GMT): 10%
+2026-Jan-03 07:52:15 (2026-Jan-03 07:52:15 GMT): 20%
+2026-Jan-03 07:52:16 (2026-Jan-03 07:52:16 GMT): 30%
+2026-Jan-03 07:52:19 (2026-Jan-03 07:52:19 GMT): 40%
+2026-Jan-03 07:52:21 (2026-Jan-03 07:52:21 GMT): 50%
+2026-Jan-03 07:52:22 (2026-Jan-03 07:52:22 GMT): 60%
+2026-Jan-03 07:52:23 (2026-Jan-03 07:52:23 GMT): 70%
+2026-Jan-03 07:52:24 (2026-Jan-03 07:52:24 GMT): 80%
+2026-Jan-03 07:52:25 (2026-Jan-03 07:52:25 GMT): 90%
+
+Finished Calculating power
+2026-Jan-03 07:52:26 (2026-Jan-03 07:52:26 GMT)
+      # of MSMV cell(s) missing power_level: 0
+Ended Power Computation: (cpu=0:02:27, real=0:00:44, mem(process/total/peak)=6850.87MB/9836.61MB/6850.88MB)
+
+Begin Processing User Attributes
+
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=6850.99MB/9836.61MB/6850.99MB)
+
+Ended Power Analysis: (cpu=0:04:03, real=0:02:18, mem(process/total/peak)=6851.05MB/9836.61MB/6851.05MB)
+
+Begin Boundary Leakage Calculation
+Ended Boundary Leakage Calculation: (cpu=0:00:00, real=0:00:00,
+mem(process/total/peak)=6851.05MB/9836.61MB/6851.05MB)
+Begin Static Power Report Generation
+*----------------------------------------------------------------------------------------
+*	Innovus 21.19-s058_1 (64bit) 04/04/2024 09:59 (Linux 3.10.0-693.el7.x86_64)
+*	
+*
+* 	Date & Time:	2026-Jan-03 07:52:26 (2026-Jan-03 07:52:26 GMT)
+*
+*----------------------------------------------------------------------------------------
+*
+*	Design: drra_wrapper
+*
+*	Liberty Libraries used:
+*	        AVF_RCWORST: /home/jcdavid/IL2225-Project/SiLagoNN/phy/db/part/drra_wrapper/pnr/libs/mmmc/GF22FDX_SC8T_104CPP_BASE_CSC28L_SSG_0P72V_0P00V_0P00V_0P00V_125C_ccs.lib.gz
+*	        AVF_RCWORST: /home/jcdavid/IL2225-Project/SiLagoNN/phy/db/part/drra_wrapper/pnr/libs/mmmc/Silago_bot_right_corner_AVF_RCWORST.lib
+*	        AVF_RCWORST: /home/jcdavid/IL2225-Project/SiLagoNN/phy/db/part/drra_wrapper/pnr/libs/mmmc/Silago_bot_AVF_RCWORST.lib
+*	        AVF_RCWORST: /home/jcdavid/IL2225-Project/SiLagoNN/phy/db/part/drra_wrapper/pnr/libs/mmmc/Silago_bot_left_corner_AVF_RCWORST.lib
+*	        AVF_RCWORST: /home/jcdavid/IL2225-Project/SiLagoNN/phy/db/part/drra_wrapper/pnr/libs/mmmc/Silago_top_right_corner_AVF_RCWORST.lib
+*	        AVF_RCWORST: /home/jcdavid/IL2225-Project/SiLagoNN/phy/db/part/drra_wrapper/pnr/libs/mmmc/Silago_top_AVF_RCWORST.lib
+*	        AVF_RCWORST: /home/jcdavid/IL2225-Project/SiLagoNN/phy/db/part/drra_wrapper/pnr/libs/mmmc/Silago_top_left_corner_AVF_RCWORST.lib
+*
+*	Parasitic Files used:
+*
+*       Power View : AVF_RCWORST
+*
+*       User-Defined Activity : N.A.
+*
+*       Activity File: N.A.
+*
+*       Hierarchical Global Activity: N.A.
+*
+*       Global Activity: N.A.
+*
+*       Sequential Element Activity: 0.200000
+*
+*       Primary Input Activity: 0.200000
+*
+*       Default icg ratio: N.A.
+*
+*       Global Comb ClockGate Ratio: N.A.
+*
+*	Power Units = 1mW
+*
+*	Time Units = 1e-12 secs
+*
+*       report_power
+*
+-----------------------------------------------------------------------------------------
+*
+
+
+
+Total Power
+-----------------------------------------------------------------------------------------
+Total Internal Power:       10.35028322 	   49.2138%
+Total Switching Power:       7.16513844 	   34.0690%
+Total Leakage Power:         3.51583013 	   16.7172%
+Total Power:                21.03125178
+-----------------------------------------------------------------------------------------
+
+
+Group                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+Sequential                         7.233      0.9522       1.171       9.356       44.49
+Macro                                  0           0           0           0           0
+IO                                     0           0   3.996e-07   3.996e-07     1.9e-06
+Combinational                      2.868       6.213       2.317        11.4       54.19
+Clock (Combinational)               0.25           0     0.02777      0.2778       1.321
+Clock (Sequential)                     0           0           0           0           0
+-----------------------------------------------------------------------------------------
+Total                              10.35       7.165       3.516       21.03         100
+-----------------------------------------------------------------------------------------
+
+
+Rail                  Voltage   Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+Default                  0.72      10.35       7.165       3.516       21.03         100
+
+
+Clock                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+clk                                 0.25           0     0.02777      0.2778       1.321
+-----------------------------------------------------------------------------------------
+Total                               0.25           0     0.02777      0.2778       1.321
+-----------------------------------------------------------------------------------------
+Clock: clk
+Clock Period: 0.020000 usec 
+Clock Toggle Rate:   100.0000 Mhz 
+Clock Static Probability:  0.5000
+  
+ 
+ 
+-----------------------------------------------------------------------------------------
+*	Power Distribution Summary: 
+*              Highest Average Power: Silago_bot_inst_2_1/SILEGO_cell/MTRF_cell/dpu_gen/U_NACU_0/U_divider/division/U_DIV/u_add_PartRem_3_22/U9 (SC8T_FAX8_A_CSC28L):        0.0008195
+*              Highest Leakage Power: Silago_top_inst_6_0/SILEGO_cell/swb/FE_OFC1416_h_bus_reg_in_out0_4_right_13 (SC8T_BUFX24_CSC28L):        6.979e-05
+*                Total Cap:      2.57701e-09 F
+*                Total instances in design: 611269
+*                Total instances in design with no power:     0
+*                Total instances in design with no activty:     0
+
+*                Total Fillers and Decap:     0
+-----------------------------------------------------------------------------------------
+ 
+** INFO:  (VOLTUS_POWR-3465): There are 0 decaps and 0 fillers in the design
+
+Ended Static Power Report Generation: (cpu=0:00:15, real=0:00:15,
+mem(process/total/peak)=7043.59MB/10077.68MB/7044.36MB)
+

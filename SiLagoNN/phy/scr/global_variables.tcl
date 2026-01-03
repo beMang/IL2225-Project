@@ -47,4 +47,3 @@ set QRC_FILE_WC "${STDC_QRC_DIR}/FuncRCmaxDP/qrcTechFile"
 set MMMC_FILE          "${SCR_DIR}/mmmc.tcl"
 set NETLIST_FILE       "${SRC_DIR}/${TOP_NAME}.v"
 set SDC_FILES          "${SRC_DIR}/${TOP_NAME}.sdc"
-

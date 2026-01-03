@@ -56,4 +56,3 @@ set master_partition_module_list {
 	Silago_bot_left_corner \
 	Silago_bot \
 	Silago_bot_right_corner }
-

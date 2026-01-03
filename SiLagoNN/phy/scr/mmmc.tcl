@@ -61,4 +61,3 @@ create_analysis_view -name AVF_RCWORST -constraint_mode functional -delay_corner
 create_analysis_view -name AVF_RCBEST  -constraint_mode functional -delay_corner BC_dc
 create_analysis_view -name AVF_RCTYP   -constraint_mode functional -delay_corner TC_dc
 set_analysis_view -setup "AVF_RCWORST" -hold "AVF_RCBEST AVF_RCTYP"
-

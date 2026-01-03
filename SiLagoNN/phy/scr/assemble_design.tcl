@@ -1,10 +1,22 @@
-read_db ../phy/db/part/drra_wrapper.enc.dat/pnr
+source ../phy/scr/global_variables.tcl
+source ${SCR_DIR}/design_variables.tcl
 
-assemble_design -block_dir ../phy/db/part/Silago_bot.enc.dat/pnr              -encounter_format
-assemble_design -block_dir ../phy/db/part/Silago_bot_left_corner.enc.dat/pnr  -encounter_format
-assemble_design -block_dir ../phy/db/part/Silago_bot_right_corner.enc.dat/pnr -encounter_format
 
-assemble_design -block_dir ../phy/db/part/Silago_top.enc.dat/pnr              -encounter_format
-assemble_design -block_dir ../phy/db/part/Silago_top_left_corner.enc.dat/pnr  -encounter_format
-assemble_design -block_dir ../phy/db/part/Silago_top_right_corner.enc.dat/pnr -encounter_format
+read_db ${PART_DIR}/${TOP_NAME}.enc.dat/pnr
 
+
+foreach module $master_partition_module_list {
+    assemble_design -block_dir ${PART_DIR}/${module}.enc.dat/pnr \
+                    -encounter_format
+}
+
+
+# Report
+report_power      > ${RPT_DIR}/${TOP_NAME}_power.txt
+report_constraint > ${RPT_DIR}/${TOP_NAME}_constraint.sdc
+report_area       > ${RPT_DIR}/${TOP_NAME}_area.txt 
+report_timing     > ${RPT_DIR}/${TOP_NAME}_timing.txt
+
+# Export Netlist
+write_db      ${OUTPUT_DIR}/${TOP_NAME}.dat
+write_netlist ${OUTPUT_DIR}/${TOP_NAME}.v
