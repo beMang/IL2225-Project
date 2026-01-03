@@ -15,7 +15,7 @@ do
                       -no_gui \
                       -batch \
                       -files ../../../scr/pnr_partition.tcl \
-                      -log "../../../../ex/log/pnr/pnr_${filename}_${TIMESTAMP}.log \
+                      -log "../../../../exe/log/pnr/pnr_${filename}_${TIMESTAMP}.log \
                             ../../../../exe/log/pnr/pnr_part_${filename}_${TIMESTAMP}.cmd \
                             ../../../../exe/log/pnr/pnr_part_${filename}_${TIMESTAMP}.logv" \
                       -overwrite &

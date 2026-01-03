@@ -1,10 +1,10 @@
 # How to task 5 and task 6
 
-**Always** In a terminal in ```/SiLagoNN/exe/```. To get the GUI, remove the ```-file``` arg and use ```source``` as the first command. 
+**Always** In a terminal in `/SiLagoNN/exe/`. To get the GUI, remove the `-file` arg and use `source` as the first command. 
 
 ## Create partitions
 
-Will call ```read_design.tcl```, ```floorplan.tcl```, ```powerplan.tcl``` and ```partition.tcl```.
+Will call `read_design.tcl`, `floorplan.tcl`, `powerplan.tcl` and `partition.tcl`.
 
 ```bash
 innovus -stylus -file ../phy/scr/create_partitions.tcl
@@ -12,7 +12,7 @@ innovus -stylus -file ../phy/scr/create_partitions.tcl
 
 ## Place and Route Silago partitions
 
-Execute and wait for the 6 processes to be finished.
+Execute and wait for the 6 processes to be finished. Use the *System Monitor* or the `.logv` files to asses end of process.
 
 ```bash
 ../phy/scr/pnr_partitions.sh
