@@ -1,5 +1,4 @@
-work/
 exe/
-.ipynb_checkpoints/
-syn/db/flat_sweep/
 *.dat/
+SiLagoNN/phy/db/
+SiLagoNN/phy/db/drra_wrapper.v
