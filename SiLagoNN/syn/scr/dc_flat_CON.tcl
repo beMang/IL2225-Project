@@ -46,4 +46,3 @@ puts "$LOGID Report"
 puts "$LOGID Export netlist"
 write -hierarchy -format ddc     -output ${OUT_DIR}/${TOP_NAME}_${con}.ddc
 write -hierarchy -format verilog -output ${OUT_DIR}/${TOP_NAME}_${con}.v
-

@@ -41,4 +41,3 @@ add_stripes -nets {VDD VSS} -layer LB -direction vertical -width 1.8 -spacing 1.
 # Special Route for Power Lanes
 set_db route_special_via_connect_to_shape { noshape }
 route_special -connect {block_pin pad_pin pad_ring core_pin floating_stripe} -layer_change_range { M1(1) LB(11) } -block_pin_target {nearest_target} -pad_pin_port_connect {all_port one_geom} -pad_pin_target {nearest_target} -core_pin_target {first_after_row_end} -floating_stripe_target {block_ring pad_ring ring stripe ring_pin block_pin followpin} -allow_jogging 1 -crossover_via_layer_range { M1(1) LB(11) } -nets { VDD VSS } -allow_layer_change 1 -block_pin use_lef -target_via_layer_range { M1(1) LB(11) }
-

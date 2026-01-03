@@ -63,4 +63,3 @@ report_power 		> ${REPORT_DIR}/${TOP_NAME}_power.txt
 # Export netlist
 write -hierarchy -format ddc -output ${OUT_DIR}/${TOP_NAME}.ddc
 write -hierarchy -format verilog -output ${OUT_DIR}/${TOP_NAME}.v
-
