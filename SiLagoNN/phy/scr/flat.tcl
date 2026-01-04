@@ -1,0 +1,79 @@
+# Task 4: Flat physical synthesis for 20ns
+# Run in exe/task_4/ innovus -stylus:
+# source ../../phy/scr/flat.tcl
+
+source ../../phy/scr/read_design.tcl
+
+# Core-centric floorplan flow rather than IO-driven flow
+set_io_flow_flag 0
+create_floorplan -site SC8T_104CPP_CMOS22FDX -core_density_size 0.998599361309 0.699942 10.088 10.0 10.088 10.0
+
+# Power rings
+set_db add_rings_target default 
+set_db add_rings_extend_over_row 0 
+set_db add_rings_ignore_rows 0 
+set_db add_rings_avoid_short 0 
+set_db add_rings_skip_shared_inner_ring none 
+set_db add_rings_stacked_via_top_layer LB 
+set_db add_rings_stacked_via_bottom_layer M1 
+set_db add_rings_via_using_exact_crossover_size 1 
+set_db add_rings_orthogonal_only true 
+set_db add_rings_skip_via_on_pin { standardcell } 
+set_db add_rings_skip_via_on_wire_shape { noshape }
+
+add_rings -nets {VDD VSS} \
+          -type core_rings \
+          -follow core \
+          -layer {top JB bottom JB left LB right LB} \
+          -width {top 1.5 bottom 1.5 left 1.8 right 1.8} \
+          -spacing {top 1.8 bottom 1.8 left 1.8 right 1.8} \
+          -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} \
+          -center 0 \
+          -threshold 0 \
+          -jog_distance 0 \
+          -snap_wire_center_to_grid none
+
+# Vertical strips
+set_db add_stripes_ignore_block_check false
+set_db add_stripes_break_at none
+set_db add_stripes_route_over_rows_only false
+set_db add_stripes_rows_without_stripes_only false
+set_db add_stripes_extend_to_closest_target none
+set_db add_stripes_stop_at_last_wire_for_area false
+set_db add_stripes_partial_set_through_domain false
+set_db add_stripes_ignore_non_default_domains false
+set_db add_stripes_trim_antenna_back_to_shape none
+set_db add_stripes_spacing_type edge_to_edge
+set_db add_stripes_spacing_from_block 0
+set_db add_stripes_stripe_min_length stripe_width
+set_db add_stripes_stacked_via_top_layer LB
+set_db add_stripes_stacked_via_bottom_layer M1
+set_db add_stripes_via_using_exact_crossover_size false
+set_db add_stripes_split_vias false
+set_db add_stripes_orthogonal_only true
+set_db add_stripes_allow_jog { padcore_ring  block_ring }
+set_db add_stripes_skip_via_on_pin {  standardcell }
+set_db add_stripes_skip_via_on_wire_shape {  noshape   }
+
+add_stripes -nets {VDD VSS} -layer LB -direction vertical -width 1.8 -spacing 1.8 -set_to_set_distance 20 -start_from left -switch_layer_over_obs false -max_same_layer_jog_length 2 -pad_core_ring_top_layer_limit LB -pad_core_ring_bottom_layer_limit M1 -block_ring_top_layer_limit LB -block_ring_bottom_layer_limit M1 -use_wire_group 0 -snap_wire_center_to_grid none
+
+# Special route
+set_db route_special_via_connect_to_shape { noshape }
+route_special -connect {block_pin pad_pin pad_ring core_pin floating_stripe} -layer_change_range { M1(1) LB(11) } -block_pin_target {nearest_target} -pad_pin_port_connect {all_port one_geom} -pad_pin_target {nearest_target} -core_pin_target {first_after_row_end} -floating_stripe_target {block_ring pad_ring ring stripe ring_pin block_pin followpin} -allow_jogging 1 -crossover_via_layer_range { M1(1) LB(11) } -nets { VDD VSS } -allow_layer_change 1 -block_pin use_lef -target_via_layer_range { M1(1) LB(11) }
+
+# Placement
+place_design
+assign_io_pins
+# CTS
+ccopt_design
+# Route
+assign_io_pins
+route_design
+
+write_db ${OUTPUT_DIR}/${TOP_NAME}_20000ps.dat
+write_netlist ${OUTPUT_DIR}/${TOP_NAME}_20000ps.v
+
+report_area > ${RPT_DIR}/${TOP_NAME}_area_20000ps.txt
+report_timing > ${RPT_DIR}/${TOP_NAME}_timing_20000ps.txt
+report_power > ${RPT_DIR}/${TOP_NAME}_power_20000ps.txt
+report_constraints > ${RPT_DIR}/${TOP_NAME}_con_20000ps.txt
