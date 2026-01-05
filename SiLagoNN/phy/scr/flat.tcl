@@ -55,7 +55,7 @@ set_db add_stripes_allow_jog { padcore_ring  block_ring }
 set_db add_stripes_skip_via_on_pin {  standardcell }
 set_db add_stripes_skip_via_on_wire_shape {  noshape   }
 
-add_stripes -nets {VDD VSS} -layer LB -direction vertical -width 1.8 -spacing 1.8 -set_to_set_distance 20 -start_from left -switch_layer_over_obs false -max_same_layer_jog_length 2 -pad_core_ring_top_layer_limit LB -pad_core_ring_bottom_layer_limit M1 -block_ring_top_layer_limit LB -block_ring_bottom_layer_limit M1 -use_wire_group 0 -snap_wire_center_to_grid none
+add_stripes -nets {VDD VSS} -layer LB -direction vertical -width 1.8 -spacing 1.8 -set_to_set_distance 10 -start_from left -switch_layer_over_obs false -max_same_layer_jog_length 2 -pad_core_ring_top_layer_limit LB -pad_core_ring_bottom_layer_limit M1 -block_ring_top_layer_limit LB -block_ring_bottom_layer_limit M1 -use_wire_group 0 -snap_wire_center_to_grid none
 
 # Special route
 set_db route_special_via_connect_to_shape { noshape }
