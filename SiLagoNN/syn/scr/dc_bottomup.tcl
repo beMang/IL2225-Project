@@ -32,7 +32,7 @@
 
 #Directory variables
 set REPORT_DIR ../syn/rpt; 			# report directory for synthesis reports on timing and area
-set OUT_DIR ../db; 				# output directory for output files: netlist, sdf sdc.
+set OUT_DIR ../syn/db; 				# output directory for output files: netlist, sdf sdc.
 set SOURCE_DIR ../rtl; 				# source directory with the rtl 
 set SYN_DIR ../syn; 				# synthesis directory
 
@@ -43,112 +43,92 @@ source ${SYN_DIR}/synopsys_dc.setup
 
 set TOP_NAME drra_wrapper;
 
-proc precompile {name n} {
-	global SOURCE_DIR SYN_DIR OUT_DIR
-	set prev_n [expr {$n - 1}]
-	analyze -format vhdl -lib WORK "${SOURCE_DIR}/mtrf/${name}.vhd"
-    elaborate ${name}
-    current_design ${name}
+proc compile_shared {design rtl_file} {
+    puts "Compiling shared block: $design"
+
+    analyze  -format vhdl -lib WORK $rtl_file
+    elaborate $design
+    current_design $design
     link
-    uniquify
-    source ${SYN_DIR}/constraints.sdc
-    if  {$n > 1} {
-        source ${OUT_DIR}/${name}_${prev_n}.wscr
+
+    compile
+
+	#protect instance (ungroup to avoid structure modification)
+    set_ungroup $design false
+    dont_touch $design
+
+    # Save for reuse
+    write -format ddc -hierarchy -output ${design}.ddc
+}
+
+proc read_hierarchy {} {
+    global SOURCE_DIR
+    set fh [open ${SOURCE_DIR}/silego_hierarchy.txt r]
+    set files [split [read $fh] "\n"]
+    close $fh
+
+    foreach f [lrange $files 0 end-1] {
+        analyze -format vhdl -lib WORK "${SOURCE_DIR}/$f"
     }
 }
 
-#EXECUTE N PASSES. DECIDE ON A REASONABLE N.
-proc nth_pass {n} {
-	global SOURCE_DIR SYN_DIR OUT_DIR TOP_NAME
-	puts "${n} pass"
-    #Hint: Write constraints for some reasonably big modules. E.g: divider_pipe and silego. (divider_pipe ??)
-    #Hint: Compile only the unique tiles
-	
-	#Compile MTRF_cell
-    precompile MTRF_cell $n
-    compile
-	
-	#Compile Silego
-	precompile silego $n
-	dont_touch MTRF_cell true
-	compile
-	
-	#Compile Silago top block
-	set silago_tiles {
-		"Silago_top_left_corner"
-		"Silago_top"
-		"Silago_top_right_corner"
-		"Silago_bot_left_corner"
-		"Silago_bot"
-		"Silago_bot_right_corner"
-	}
+read_hierarchy
 
-	foreach tile $silago_tiles {
-		precompile $tile $n
-		dont_touch MTRF_cell true
-		dont_touch silego true
-		compile
-	}
+#Compile sub-blocks
+compile_shared MTRF_cell  ${SOURCE_DIR}/mtrf/MTRF_cell.vhd
+compile_shared silego     ${SOURCE_DIR}/mtrf/silego.vhd
 
-    #compile drra_wrapper toplevel
-    analyze -format vhdl -lib WORK "${SOURCE_DIR}/mtrf/${TOP_NAME}.vhd"
-    elaborate $TOP_NAME
-    current_design $TOP_NAME
-    link
-    uniquify
-    source ${SYN_DIR}/constraints.sdc
-    
-    #get new names from uniqify for dont_touch
-    set silago_top_instances [get_cells -hierarchical Silago_top* -quiet]
-	set silago_bot_instances [get_cells -hierarchical Silago_bot* -quiet]
-	set sub_tiles [list MTRF_cell silego]
-	
-	set silago_instances [concat $silago_top_instances $silago_bot_instances]
-	set all_instances [concat $sub_tiles $silago_instances]
-	
-	# Mark them as dont_touch
-	foreach cell $all_instances {
-		dont_touch $cell true
-	}
-	
-    compile
-
-    #check if the constraints are met
-    report_constraint
-    report_area
-    report_power
-    report_timing
-    report_constraint
-    
-    #Characterize blocks
-    foreach inst $silago_instances {
-		characterize -constraint $inst #some instance are not valid (WHY ?)
-	}
-    
-    #save scripts for next pass
-    set unique_designs [list MTRF_cell silego]
-	set unique_designs [concat $unique_designs $silago_tiles]
-	foreach design $unique_designs {
-		current_design $design #top and bot cells are not found
-		write_script > ${OUT_DIR}/${design}_${n}.wscr
-	}
+set UNIQUE_TILES {
+    Silago_top_left_corner
+    Silago_top
+    Silago_top_right_corner
+    Silago_bot_left_corner
+    Silago_bot
+    Silago_bot_right_corner
 }
 
-# Read files from hierarchy_files
-set hierarchy_files [split [read [open ${SOURCE_DIR}/silego_hierarchy.txt r]] "\n"]
-foreach filename [lrange ${hierarchy_files} 0 end-1] {
-	puts "${filename}"
-	analyze -format vhdl -lib WORK "${SOURCE_DIR}/${filename}"
-}
+set N_pass 1 #only one pass seemed to be sufficient to meet constraint
 
-set N_pass 2
 for {set pass 1} {$pass <= $N_pass} {incr pass} {
-    nth_pass $pass
+    puts "\n========== Pass number : $pass ==========\n"
+
+    foreach tile $UNIQUE_TILES {
+        puts "Compiling unique tile: $tile"
+        analyze  -format vhdl -lib WORK "${SOURCE_DIR}/mtrf/${tile}.vhd"
+        elaborate $tile
+        current_design $tile
+        link
+
+        source ${SYN_DIR}/constraints.sdc
+        compile
+
+        # write_script > ${OUT_DIR}/${tile}_${pass}.wscr
+    }
 }
 
+puts "\n========== TOP LEVEL ==========\n"
+
+analyze  -format vhdl -lib WORK "${SOURCE_DIR}/mtrf/${TOP_NAME}.vhd"
+elaborate $TOP_NAME
 current_design $TOP_NAME
-report_area > ${REPORT_DIR}/area.txt
-report_power > ${REPORT_DIR}/power.txt
-report_timing > ${REPORT_DIR}/timing.txt
-write_file -format verilog -hier -output ${OUT_DIR}/${TOP_NAME}.v
+link
+source ${SYN_DIR}/constraints.sdc
+
+# Protect ALL shared instances
+set shared_instances [get_cells -hierarchical *Silago*]
+foreach inst $shared_instances {
+    dont_touch $inst true
+}
+
+compile
+
+#report :
+report_constraint > ${REPORT_DIR}/constraints.txt
+report_area       > ${REPORT_DIR}/area.txt
+report_power      > ${REPORT_DIR}/power.txt
+report_timing     > ${REPORT_DIR}/timing.txt
+
+#output
+write_file -format verilog -hierarchy -output ${OUT_DIR}/${TOP_NAME}.v
+write_sdc ${OUT_DIR}/${TOP_NAME}.sdc
 
