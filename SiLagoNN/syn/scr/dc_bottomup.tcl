@@ -56,9 +56,6 @@ proc compile_shared {design rtl_file} {
 	#protect instance (ungroup to avoid structure modification)
     set_ungroup $design false
     dont_touch $design
-
-    # Save for reuse
-    write -format ddc -hierarchy -output ${design}.ddc
 }
 
 proc read_hierarchy {} {
