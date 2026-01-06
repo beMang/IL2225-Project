@@ -51,7 +51,7 @@ add_stripes -nets {VDD VSS} \
             -direction vertical \
             -width 1.8 \
             -spacing 1.8 \
-            -set_to_set_distance 20 \
+            -set_to_set_distance 105 \
             -start_from left \
             -switch_layer_over_obs false \
             -max_same_layer_jog_length 2 \
